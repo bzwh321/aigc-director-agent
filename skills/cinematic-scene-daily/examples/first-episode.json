@@ -1,0 +1,97 @@
+{
+  "series_id": "megastructure-cinema",
+  "revision": 1,
+  "title": "潮汐之后：文明留下的五种尺度",
+  "organization": "shared_world",
+  "world_premise": "一次漫长迁徙后的海洋星球，留守者重新使用分散在海岸、荒漠、高山和极地的基础设施。五处地点各有自己的生活故事，共同表达巨大系统中仍有微小而持续的生活。此为导演创作草案，不属于既有群星剧情。",
+  "style_id": "photoreal-cinema",
+  "subject_motion": "none",
+  "status": "proposed_not_generated",
+  "assumptions": [
+    "暂按同一世界下的独立地点设计；可切换为不同题材的合集。",
+    "暂按参考片宽银幕与音乐长度设计5镜共11秒；不是固定日常模板。",
+    "配乐暂列参考视频音轨，尚待用户确认；未新增公开使用授权。",
+    "真实环境微动方案与二维轻推拉备选均需人审选择，尚未核对供应商或价格。"
+  ],
+  "output": {"width": 2520, "height": 1080, "fps": 30},
+  "music": {
+    "scope": "episode_unified_pending_confirmation",
+    "path": "<PROJECT_ROOT>/<示例项目>/素材/示例素材.mp4",
+    "start_seconds": 0,
+    "source_role": "候选配乐来源及展示节奏参考，不是人物或建筑身份素材",
+    "reuse_confirmed": false,
+    "beat_timing": "未听辨；切点暂均分，不声称卡点完成"
+  },
+  "shots": [
+    {
+      "shot_id": "S01",
+      "title": "晨潮之门",
+      "duration_seconds": 2.2,
+      "story": "留守的渡船调度员在退潮时开放城市的旧海门，巨大结构仍服务于一艘小船。",
+      "emotion": "宁静、重新开始",
+      "architecture_function": "两座承载潮汐闸门的海港塔墩与高架维护桥",
+      "composition": "岸边人眼高度的广景，左侧湿石栏杆作前景，中景调度员和低矮渡船提供尺度，远景两座不对称闸塔围出一条通往晨光的水路；第一眼读门洞与光，第二眼发现小船。",
+      "lighting": "清晨低角度暖日光从海门背后掠入，塔墩冷灰阴影保留材质，海面仅少量方向一致的反射。",
+      "material": "盐蚀混凝土、深色闸板、潮湿玄武岩；仍在工作的通道局部洁净",
+      "image_prompt": "写实电影宽银幕画面，岸边人眼高度，潮汐海港两座极其高大的不对称混凝土闸塔，高架维护桥连接塔体，塔间晨光照向退潮水道。一艘很小的渡船停在中景，岸边一名调度员静立提供可信尺度，左前景湿玄武岩栏杆与水道形成连续引导关系。建筑结构受力可信，盐蚀和湿痕符合高度，暖低日光与冷灰阴影，摄影式透视、克制的细节层次、真实材料反射。无可读文字，无概念画笔触，无夸张鱼眼，无额外人物。",
+      "motion": {"subject": "调度员与船保持位置", "environment": "水面细小波纹缓慢移动", "camera": "固定机位", "preserve": "闸塔轮廓、门洞比例与人物数量", "local_fallback": "仅居中1.03倍缓推，不含真实波纹运动"},
+      "solution_facts_after_static_acceptance": {"input_kind": "image", "operation": "generate", "subject_motion": "none", "camera_motion": "none", "needs_new_pixels": true, "hard_end_frame": false}
+    },
+    {
+      "shot_id": "S02",
+      "title": "沙海的阴影",
+      "duration_seconds": 2.2,
+      "story": "正午的补给队停在一座废弃太阳能收集器投下的阴影里，旧能源设施成为旅人的临时庇护。",
+      "emotion": "炽热与庇护",
+      "architecture_function": "倾斜的巨大太阳能反射阵列及三角支撑架",
+      "composition": "高处斜俯广景，巨大的斜面从右上切入，三角阴影压在浅色沙地上；左下的三辆微小补给车在阴影边缘形成尺度点。留大面积安静的沙面，不以密集细节填满。",
+      "lighting": "近乎白色的正午硬光、锐利阴影边界，反射器背面偏暗且不自发光。",
+      "material": "磨砂铝板、陶瓷背板、砂埋桁架",
+      "image_prompt": "写实科幻电影广景，高处斜俯镜头，一座倾斜的巨型太阳能收集阵列悬在浅米色沙海上，由可信三角桁架承载。斜面从右上进入画幅，在沙地投下一个巨大而清晰的三角阴影。左下阴影边缘停着三辆很小的补给车，车辙来自画面外并自然汇入停车处。正午硬光，明亮沙地与深暗机械背面，铝板陶瓷和沙粒具有不同反射特性。大面积负空间，近远细节递减，摄影式可信尺度，无文字，无插画风，无密集发光线。",
+      "motion": {"subject": "车辆停车，阵列结构不变形", "environment": "远地表轻微热扰动，近地薄沙低速掠过", "camera": "固定", "preserve": "三辆车、支撑接触点、阴影主形", "local_fallback": "仅二维缓推，热扰动保持静止"},
+      "solution_facts_after_static_acceptance": {"input_kind": "image", "operation": "generate", "subject_motion": "none", "camera_motion": "none", "needs_new_pixels": true, "hard_end_frame": false}
+    },
+    {
+      "shot_id": "S03",
+      "title": "雨中的空港",
+      "duration_seconds": 2.2,
+      "story": "一名检修员守着暂时停运的峡谷空港，远端维护通道的灯仍然亮着，暗示设施尚未被放弃。",
+      "emotion": "孤独、等待",
+      "architecture_function": "跨越峡谷的多层悬臂式货运空港",
+      "composition": "低机位仰视，前景近处挑檐遮住部分天空，中景检修平台和一人，后景多层悬臂递进消失在雨中；避免所有平台等量可见。",
+      "lighting": "蓝灰雨天漫射光，只有维护走廊里少量琥珀色工作灯，不做全楼霓虹。",
+      "material": "湿润深色金属、真实接缝与排水槽、局部磨损",
+      "image_prompt": "写实电影镜头，低机位从狭窄检修平台向峡谷上方仰望，一座庞大的多层悬臂货运空港跨越峡谷。近处屋檐构成暗前景，一名穿普通防雨工作服的检修员背对镜头站在安全栏内，后方重叠的钢结构平台在雨雾中逐层消失。可信排水槽和支撑接点，蓝灰雨天光，远端维护走廊只有少量琥珀工作灯。湿金属反射方向一致，深度和遮挡清楚，电影实拍质感，无飞船穿模，无霓虹铺满，无文字，无画笔质感。",
+      "motion": {"subject": "检修员静立", "environment": "细雨沿重力落下，背景薄雾慢移", "camera": "固定", "preserve": "所有悬臂和栏杆几何，不新增飞行器", "local_fallback": "仅二维1.02倍缓推，雨保持静态"},
+      "solution_facts_after_static_acceptance": {"input_kind": "image", "operation": "generate", "subject_motion": "none", "camera_motion": "none", "needs_new_pixels": true, "hard_end_frame": false}
+    },
+    {
+      "shot_id": "S04",
+      "title": "冰下的档案",
+      "duration_seconds": 2.2,
+      "story": "极地档案馆的守护者点亮一间阅览室，厚冰中的城市记忆继续被使用。",
+      "emotion": "肃静、珍惜",
+      "architecture_function": "半埋冰层的同心环形地下档案馆采光井",
+      "composition": "接近轴线但略偏心的俯视镜头，近处冰层断面，中景一圈工作廊，深处层层圆环；唯一亮起的阅览室偏离中心，给观看提供第二落点。",
+      "lighting": "极昼柔冷天光经冰层散射，一间阅览室柔暖局部光，保持层次而非全井照亮。",
+      "material": "透光厚冰、浅色矿物板、雾面玻璃，洁净维护面与冰层区分",
+      "image_prompt": "写实电影宽银幕，略偏心的俯视机位透过极地冰层中的巨大圆形采光井看向地下档案馆。近处厚冰断面有真实透光散射，中景环形维护走廊有一位极小的守护者，深处同心圆层层下降并自然转暗。偏离中心的一间阅览室亮着柔暖灯光，其余空间接受柔冷极昼天光。浅色矿物板、雾面玻璃与冰的材质区别明确，结构连续可信，安静负空间，真实摄影曝光，无魔法符文，无全亮圆环，无可读文字。",
+      "motion": {"subject": "人物静立，圆环结构固定", "environment": "井口极薄冷雾轻移", "camera": "固定", "preserve": "同心结构、不增加灯光房间或人物", "local_fallback": "仅小幅居中推近，雾静止"},
+      "solution_facts_after_static_acceptance": {"input_kind": "image", "operation": "generate", "subject_motion": "none", "camera_motion": "none", "needs_new_pixels": true, "hard_end_frame": false}
+    },
+    {
+      "shot_id": "S05",
+      "title": "归航的刻度",
+      "duration_seconds": 2.2,
+      "story": "黄昏时，观测员来到山脊上的旧轨道电梯基座，远处地面的引航灯仍为未来的归航保留。",
+      "emotion": "辽阔、希望的余韵",
+      "architecture_function": "山脊上的轨道电梯地面锚定设施与引航通道",
+      "composition": "远距离长焦横向压缩，前景暗山脊和极小观测员，远处锚定塔垂直越出画幅，水平山海与垂直塔形成对照，右侧留出暮色天空。",
+      "lighting": "落日之后的玫瑰灰天空与山体冷影，地面仅一条稀疏低亮引航灯，塔身不整体发光。",
+      "material": "深色复合材料塔身、风蚀山岩和低矮地面维护设施",
+      "image_prompt": "真实摄影质感的科幻电影远景，远距离长焦取景，一座轨道电梯地面锚定塔从山脊垂直升出画面上缘，塔底有尺度可信的低矮维护建筑。前景暗山脊上只有一名很小的观测员，远方平静山海构成横向层次，右侧保留玫瑰灰暮色天空。地面一条稀疏低亮引航灯指向塔基，塔身不自发光。风蚀岩石与深色复合材料表面可辨，落日后柔光，真实大气透视，无夸张星云，无概念画效果，无文字。",
+      "motion": {"subject": "观测员与塔身静止", "environment": "远层薄云慢移", "camera": "固定，留结束停顿", "preserve": "塔体垂直、一个观测员、灯光不闪烁", "local_fallback": "1.02倍二维缓推，保留尾部停顿"},
+      "solution_facts_after_static_acceptance": {"input_kind": "image", "operation": "generate", "subject_motion": "none", "camera_motion": "none", "needs_new_pixels": true, "hard_end_frame": false}
+    }
+  ]
+}

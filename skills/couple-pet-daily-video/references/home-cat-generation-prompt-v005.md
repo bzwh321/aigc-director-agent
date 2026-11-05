@@ -1,0 +1,21 @@
+# 自家猫 v005 生成提示词
+
+执行器：Codex 内置 GPT Image 2。执行日期：2026-10-15。输入两张真实幼猫照片和两张成年补充照片；调用一次，自动重试 0 次。
+
+```text
+Use case: photorealistic-natural
+Asset type: production character identity turnaround sheet for a vertical pet-video skill
+Primary request: Reconstruct the exact household cat as it genuinely looked in kittenhood, using Images 1 and 2 as the highest-authority references for age, proportions, face, coat distribution and natural kitten cuteness. Create a clean four-view identity sheet. Do not invent a generic chibi cat and do not exaggerate beyond the real kitten photos.
+Input image roles: Image 1 is the primary real kitten reference for the genuine large head, large ears, tiny body, short legs, small paws, dark facial mask, central light muzzle/blaze, broad white chest ruff and black-brown-copper side patches. Image 2 is the primary real kitten side-body reference for the extensive white neck/chest/belly/legs, compact seated body and deep dark back patches with limited warm copper. Image 3 is the same cat as an adult and may only clarify stable facial identity, adult pale-green eye direction, long white whiskers and the fact that the white chest belongs to a continuous neck ruff. Image 4 is the adult back reference used only to reconstruct the unseen rear continuity of the white neck ring, back patch family and tail color. Adult proportions must not override Images 1 and 2.
+Age and proportions: unmistakably a real young kitten, matching Images 1 and 2: naturally large head, tall slightly oversized ears, small delicate compact torso, short light legs and tiny rounded white paws. Do not artificially enlarge the head beyond the photographs. Preserve the real kitten's seated/standing body scale and juvenile delicacy.
+Eyes: large kitten eyes with a soft pale gray-green to blue-green appearance consistent with the childhood photos, subtly tending green; realistic iris, pupils, reflections and eyelids. Do not force the saturated adult green and do not use anime eyes.
+Face identity: mostly black and dark-brown tabby mask around forehead and eyes, subtle warm-copper areas, narrow irregular light blaze/muzzle marking near the center, small pinkish nose, long white whiskers. Keep the asymmetry and exact dark-dominant impression from the kitten photos rather than making a balanced standard calico mask.
+Highest-priority neck identity: broad white chest fur that continues around both sides of the neck as a natural white fur ring. Use the adult rear evidence to show a clear white band across the back of the neck in the rear view. It is natural fur coloration, never a collar or scarf.
+Body identity: kitten coat is long and soft but not fully adult-length. Large dark black-brown patches dominate the back and outer body; warm copper-orange occurs in concentrated side/rear patches, not evenly scattered; lower chest, belly-side, legs and all four paws are substantially white as shown in Image 2.
+Tail: a kitten-stage fluffy tail, already visibly long-haired and mostly dark with subtle warm-brown/copper transition, but smaller and less massive than the adult plume tail.
+Scene/backdrop: seamless neutral light-gray photography studio, consistent soft diffused lighting and subtle grounded contact shadows.
+Composition/framing: orderly 2x2 turnaround sheet showing exactly four full-body depictions of the same real kitten identity: front, three-quarter front, left profile and rear. Identical age, proportions, eye color, facial asymmetry, white neck ring, body patch logic and tail across all views. Full ears, paws and tail visible.
+Style/medium: high-end photoreal kitten photography, gentle and naturally cute, with real fur strands, whiskers, ear skin, joints and weight.
+Constraints: exactly four views of one kitten; mouth closed; no extra animals; no text, labels, borders, clothing, literal collar, scarf, props, flowers, furniture, watermark or room background.
+Avoid: invented cartoon Q proportions, adult cat body, huge adult plume tail, generic symmetrical calico, too much orange, orange-white kitten, missing white neck ring, missing white legs, saturated neon-green eyes, flat Persian face, anime illustration, 3D cartoon, plush toy or plastic fur.
+```

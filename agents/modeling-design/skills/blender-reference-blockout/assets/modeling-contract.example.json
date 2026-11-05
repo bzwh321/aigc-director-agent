@@ -1,0 +1,20 @@
+{
+  "schema_version": "blender-blockout/v1",
+  "example_only": true,
+  "asset_id": "sample-object",
+  "mode": "plan",
+  "request": "按照本次文字描述建立一个主体与独立附件组成的可编辑白模；具体形体由当前参考决定。",
+  "reference_images": [],
+  "scale": {"meters_per_unit": null, "source": "relative_only", "basis": "示例未提供绝对标尺，不虚构米数。"},
+  "facts": [
+    {"id": "visible-design", "statement": "主体与附件需要独立编辑。", "status": "design_assumption", "source": "example_only"}
+  ],
+  "components": [
+    {"id": "main-body", "parent": null, "method": "controlled_surface", "dimensions": {"x": null, "y": null, "z": null}, "dimension_source": "design_assumption", "anchors": []},
+    {"id": "attachment", "parent": "main-body", "method": "reference_driven", "dimensions": {"x": null, "y": null, "z": null}, "dimension_source": "design_assumption", "anchors": []}
+  ],
+  "preserve": [],
+  "output_root": "project-output/sample-object/v001",
+  "deliverables": ["model.blend", "review-front.png", "review-side.png"],
+  "review_views": ["reference_if_available", "front", "side", "top_if_spatial"]
+}

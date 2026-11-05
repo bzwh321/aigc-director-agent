@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>导演制作合同 — 制作合同</title>
+<style>
+:root{
+  --bg:#10171b;--surface:#182026;--surface2:#1e2b32;
+  --border:#2a3b44;--text:#e6eeed;--muted:#8aa4ad;--accent:#3b9eba;
+  --ok:#4ade80;--ng:#f87171;--pending:#fbbf24;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC",sans-serif;font-size:14px;line-height:1.6;}
+main{max-width:1400px;margin:0 auto;padding:16px;}
+a{color:var(--accent);text-decoration:none;}
+a:hover{text-decoration:underline;}
+h2{font-size:1.2rem;font-weight:600;margin:28px 0 12px;border-bottom:1px solid var(--border);padding-bottom:6px;}
+h3{font-size:.95rem;font-weight:600;margin:14px 0 6px;color:var(--muted);}
+code{font-size:11px;background:var(--surface2);padding:1px 4px;border-radius:3px;}
+pre{white-space:pre-wrap;font-size:11px;background:var(--surface2);padding:8px;border-radius:4px;margin-top:4px;}
+
+/* top nav */
+nav.top-nav{position:sticky;top:0;z-index:100;background:var(--surface);border-bottom:1px solid var(--border);
+  padding:8px 16px;display:flex;gap:16px;flex-wrap:wrap;}
+nav.top-nav a{color:var(--muted);font-size:13px;}
+nav.top-nav a:hover{color:var(--text);}
+
+/* page header */
+.pg-header{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-start;
+  padding:14px;background:var(--surface);border-radius:8px;margin-bottom:12px;}
+.pg-title{font-size:1.35rem;font-weight:700;flex:1;min-width:180px;}
+.pg-meta{display:flex;flex-direction:column;gap:3px;font-size:12px;color:var(--muted);}
+
+/* badges */
+.badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:11px;font-weight:600;}
+.badge-ok{background:rgba(74,222,128,.16);color:var(--ok);border:1px solid var(--ok);}
+.badge-ng{background:rgba(248,113,113,.16);color:var(--ng);border:1px solid var(--ng);}
+.badge-pending{background:rgba(251,191,36,.16);color:var(--pending);border:1px solid var(--pending);}
+
+/* warning */
+.warn-bar{background:rgba(248,113,113,.1);border-left:4px solid var(--ng);
+  padding:10px 14px;margin-bottom:14px;border-radius:0 6px 6px 0;}
+.warn-bar ul{padding-left:18px;margin-top:6px;}
+.warn-bar li{font-size:12px;color:var(--ng);}
+
+/* asset cards */
+.asset-grid{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px;}
+.asset-card{background:var(--surface2);border:1px solid var(--border);border-radius:8px;
+  padding:10px;width:190px;display:flex;flex-direction:column;gap:5px;}
+.asset-card img{width:100%;height:110px;object-fit:cover;border-radius:4px;}
+.asset-id{font-size:10px;color:var(--muted);font-family:monospace;}
+.asset-name{font-weight:600;font-size:12px;}
+
+/* thumbnails */
+.thumb-wrap{position:relative;display:inline-block;vertical-align:top;margin-right:4px;}
+.thumb-wrap img{width:80px;height:60px;object-fit:cover;border-radius:3px;border:1px solid var(--border);}
+.thumb-placeholder{display:inline-flex;align-items:center;justify-content:center;
+  width:80px;height:60px;background:var(--surface2);border:1px solid var(--border);border-radius:3px;}
+.placeholder-name{font-size:9px;color:var(--muted);word-break:break-all;text-align:center;padding:3px;}
+.frame-badge{position:absolute;top:2px;left:2px;background:rgba(0,0,0,.75);color:#fff;
+  font-size:9px;padding:1px 4px;border-radius:2px;z-index:1;pointer-events:none;}
+
+/* tables */
+.scroll{overflow-x:auto;}
+table{width:100%;border-collapse:collapse;font-size:12px;}
+th{background:var(--surface2);color:var(--muted);padding:6px 8px;text-align:left;
+  white-space:nowrap;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10;}
+td{padding:6px 8px;border-bottom:1px solid var(--border);vertical-align:top;}
+tr:hover td{background:rgba(255,255,255,.025);}
+td:first-child,th:first-child{position:sticky;left:0;background:var(--surface);z-index:5;}
+tr:hover td:first-child{background:var(--surface2);}
+.group-row td{background:var(--surface2);color:var(--muted);font-weight:600;
+  font-size:11px;border-top:2px solid var(--border);}
+tr.rejected td{color:var(--ng);border-left:3px solid var(--ng);background:rgba(248,113,113,.05);}
+
+/* thinking cards */
+.think-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;
+  padding:12px;margin-bottom:10px;}
+.think-card h4{font-size:12px;font-weight:600;margin-bottom:8px;}
+.tf{font-size:12px;margin-bottom:5px;}
+.tf .lbl{color:var(--muted);margin-right:6px;}
+.assum-list,.opt-list{list-style:none;padding:0;margin:3px 0;}
+.assum-list li,.opt-list li{background:var(--surface2);border-radius:4px;
+  padding:3px 8px;margin-bottom:3px;font-size:11px;}
+.ev-user_confirmed{color:var(--ok);}
+.ev-measured{color:var(--accent);}
+.ev-inferred{color:var(--pending);}
+.opt-chosen{border-left:3px solid var(--ok);}
+.opt-other{border-left:3px solid var(--border);opacity:.75;}
+details summary{cursor:pointer;color:var(--muted);font-size:12px;user-select:none;}
+details[open] summary{color:var(--text);}
+
+/* versions */
+.ver-list{list-style:none;padding:0;}
+.ver-list li{padding:4px 0;border-bottom:1px solid var(--border);font-size:12px;}
+
+/* footer */
+footer{font-size:11px;color:var(--muted);margin-top:28px;padding-top:10px;border-top:1px solid var(--border);}
+footer p{margin-bottom:3px;}
+
+@media print{
+  :root{--bg:#fff;--surface:#f4f4f4;--surface2:#eaeaea;--border:#ccc;--text:#111;--muted:#555;}
+  nav.top-nav{display:none;}
+  details,details[open]{display:block;}
+  details summary{display:none;}
+  .badge{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+</style>
+</head>
+<body>
+<nav class="top-nav">
+  <a href="#top">页头</a>
+  <a href="#assets">资产</a>
+  <a href="#design">设计表</a>
+  <a href="#generate">生成表</a>
+  <a href="#thinking">思考</a>
+  <a href="#reviews">审核</a>
+  <a href="#versions">历史</a>
+  <a href="#footer-sec">页脚</a>
+</nav>
+<main>
+
+<section id="top">
+<div class="pg-header">
+  <div class="pg-title">导演制作合同</div>
+  <div class="pg-meta">
+    <span>项目：待定</span>
+    <span>Schema：director-production/v3</span>
+    <span>生成时间：2026-11-03 00:41:26</span>
+    <span>整体状态：<span class="badge badge-ng">拒绝</span></span>
+    <span>来源：contract-v1-demo.json</span>
+  </div>
+</div>
+
+</section>
+
+<section id="assets"><h2>全局资产</h2>
+<h3>人物</h3><div class="asset-grid">
+<div class="asset-card">
+  <span class="thumb-placeholder"><span class="placeholder-name">S01-晨潮之门-v001.png</span></span>
+  <div class="asset-id">char-ling</div>
+  <div class="asset-name">char-ling</div>
+  <div class="tf" style="font-size:11px">主角凌，深色湿发、藏青工装，右手背有旧疤</div>
+  <div class="asset-id">镜头：S01-01, S01-02, S01-03</div>
+  <div class="asset-id">sha256：a1b2c3d4</div>
+</div>
+</div>
+<h3>场景</h3><div class="asset-grid">
+<div class="asset-card">
+  <span class="thumb-placeholder"><span class="placeholder-name">S01-潮闸内部的东西-v002.png</span></span>
+  <div class="asset-id">scene-gate</div>
+  <div class="asset-name">scene-gate</div>
+  <div class="tf" style="font-size:11px">潮闸内部：锈蚀铜门、潮湿混凝土、冷蓝环境光＋门缝暖光</div>
+  <div class="asset-id">镜头：S01-01, S01-03, S01-04</div>
+  <div class="asset-id">sha256：b2c3d4e5</div>
+</div>
+</div>
+<h3>道具</h3><div class="asset-grid">
+<div class="asset-card">
+  <span class="thumb-placeholder"><span class="placeholder-name">（无路径）</span></span>
+  <div class="asset-id">prop-ring</div>
+  <div class="asset-name">prop-ring</div>
+  <div class="tf" style="font-size:11px">铜门环，兽首衔环式样，直径约 18cm</div>
+  <div class="asset-id">镜头：S01-01</div>
+  <div class="asset-id">sha256：待定</div>
+</div>
+</div>
+<h3>故事背景</h3><div class="asset-grid">
+<div class="asset-card">
+  <span class="thumb-placeholder"><span class="placeholder-name">（无路径）</span></span>
+  <div class="asset-id">world-chaozha</div>
+  <div class="asset-name">world-chaozha</div>
+  <div class="tf" style="font-size:11px">潮闸会在落潮后三小时内开启，闸内是旧时代的排水层；此处无电力，只有漫反射天光与门后一线暖光。</div>
+  <div class="asset-id">镜头：待定</div>
+  <div class="asset-id">sha256：待定</div>
+</div>
+</div>
+</section>
+<section id="design"><h2>设计表</h2><div class="scroll"><table><tr>
+  <th>组号</th><th>镜头号</th><th>时长</th><th>镜头描述</th>
+  <th>观众应理解</th><th>景别·视角·运镜</th><th>主体动作</th>
+  <th>台词/配音</th><th>音效</th><th>状态</th>
+</tr><tr class="group-row"><td colspan="10">组 G01 · 目标时长 6.0s · 2 镜 · <span class="badge badge-ok">通过</span></td></tr><tr>
+  <td>G01</td><td>S01-01</td><td>2.5s</td>
+  <td>手部特写，抬手停在门环前</td><td>她在犹豫</td><td>特写 · 平视略俯 · 极缓推</td><td>右手抬起→悬停门环上方→指节微颤</td>
+  <td>—</td><td>远处水滴回声 @0.4s</td><td><span class="badge badge-ok">通过</span></td>
+</tr><tr>
+  <td>G01</td><td>S01-02</td><td>3.5s</td>
+  <td>手放下，人后退半步</td><td>她还是不敢</td><td>中景 · 平视 · 静止</td><td>手放下→重心后移→后退半步</td>
+  <td><span class="ev-estimated">她：……有人在吗？ (2.0s)</span></td><td>鞋底摩擦湿地面 @3.0s</td><td><span class="badge badge-pending">待审</span></td>
+</tr><tr class="group-row"><td colspan="10">组 G02 · 目标时长 9.0s · 2 镜 · <span class="badge badge-pending">待审</span></td></tr><tr>
+  <td>G02</td><td>S01-03</td><td>4.0s</td>
+  <td>双手推门，门缝扩开</td><td>门开了</td><td>中近景 · 背身过肩 · 随门轻微横移</td><td>双手贴门→发力→门开 30°</td>
+  <td>—</td><td>门轴吱呀 @3.0s<br>金属回响 @3.6s</td><td><span class="badge badge-pending">待审</span></td>
+</tr><tr>
+  <td>G02</td><td>S01-04</td><td>5.0s</td>
+  <td>光铺满墙，墙外传来摩擦声</td><td>里面有东西在动</td><td>空镜 · 低角度 · 极缓推</td><td>无主体；墙面上有阴影掠过</td>
+  <td>—</td><td>湿滑摩擦声 @3.0s<br>低频闷响 @4.2s</td><td><span class="badge badge-pending">待审</span></td>
+</tr></table></div></section>
+<section id="generate"><h2>生成表</h2><div class="scroll"><table><tr>
+  <th>组号</th><th>镜头号</th><th>静态帧</th><th>静态审核</th>
+  <th>视频节点</th><th>模式</th><th>视频提示词</th>
+  <th>最终完整提示词</th><th>单镜合同</th><th>入上下文</th>
+</tr><tr class="group-row"><td colspan="10">组 G01 · 节点 Seedance · reference · 模式 reference · 手部特写起，铜门占据画面右侧三分之二，缓慢推近；她抬手至门环，停顿，放下；冷蓝环境光，门缝透出一线暖光。 · <span class="badge badge-ok">通过</span></td></tr><tr>
+  <td>G01</td><td>S01-01</td>
+  <td><span class="thumb-placeholder"><span class="placeholder-name">S01-晨潮之门-v001.png</span></span> <span class="thumb-placeholder"><span class="placeholder-name">S01-潮闸内部的东西-v002.png</span></span></td><td>待定</td>
+  <td>Seedance · reference</td><td>reference</td><td>特写，女性右手抬起悬停在铜制门环上方，指节微颤，冷蓝环境光，浅景深，缓慢推近。</td>
+  <td><details><summary>展开完整提示词</summary><pre>电影写实风格，35mm 镜头，浅景深，冷蓝环境光＋门缝暖光轮廓；女性右手（浅麦色皮肤，指节有旧疤）抬起悬停在铜制门环上方，指节微颤；背景铜门占画面三分之二，锈迹与潮气凝结；极缓推近，机位平视略俯；不要出现面部，不要出现怪物，不要快速运镜。</pre></details></td><td><span class="badge badge-ok">通过</span></td>
+  <td>✓</td>
+</tr><tr>
+  <td>G01</td><td>S01-02</td>
+  <td><span class="thumb-placeholder"><span class="placeholder-name">S01-晨潮之门-v001.png</span></span></td><td>待定</td>
+  <td>Seedance · reference</td><td>reference</td><td>中景，女性放下手臂、重心后移并后退半步，机位静止，冷蓝环境光。</td>
+  <td><details><summary>展开完整提示词</summary><pre>电影写实风格，50mm 镜头，中景全身入画；女性（深色湿发，藏青工装）放下手臂，重心后移，后退半步，肩线放松又绷紧；机位静止，平视；环境为锈蚀铜门与潮湿水泥墙；不要正面大特写，不要出现怪物。</pre></details></td><td><span class="badge badge-pending">待审</span></td>
+  <td>✗</td>
+</tr><tr class="group-row"><td colspan="10">组 G02 · 节点 Seedance · first-last frame · 模式 first-last frame · 从首帧的门缝一线光到末帧的门开 30°、暖光铺满墙面；第 6 秒门轴吱呀，第 8 秒墙外传来一声湿滑的摩擦。 · <span class="badge badge-pending">待审</span></td></tr><tr>
+  <td>G02</td><td>S01-03</td>
+  <td><span class="thumb-placeholder"><span class="placeholder-name">S01-潮闸内部的东西-v002.png</span></span></td><td>待定</td>
+  <td>Seedance · first-last frame</td><td>first-last frame</td><td>背身过肩中近景，双手贴住铜门发力，门向内开启约 30 度，暖光从门缝铺开。</td>
+  <td><details><summary>展开完整提示词</summary><pre>电影写实风格，40mm 镜头，背身过肩中近景；女性双手贴住铜门发力，肩背肌肉绷紧，门向内开启约 30 度；门缝暖光逐渐铺到潮湿墙面，形成锐利光楔；机位随门轻微横移；第 3 秒门轴吱呀；不要出现门后的实体，不要过曝。</pre></details></td><td><span class="badge badge-pending">待审</span></td>
+  <td>✗</td>
+</tr><tr>
+  <td>G02</td><td>S01-04</td>
+  <td><span class="thumb-placeholder"><span class="placeholder-name">S02-沙海的阴影-v001.png</span></span></td><td>待定</td>
+  <td>Seedance · reference</td><td>reference</td><td>空镜，暖光铺满潮湿墙面，一道模糊阴影沿墙掠过，极缓推近。</td>
+  <td><details><summary>展开完整提示词</summary><pre>电影写实风格，低角度空镜，暖光以光楔形态铺满潮湿混凝土墙面，水渍反光；第 3 秒一道模糊的、体型偏长的阴影沿墙掠过（不出现在焦内）；极缓推近；低频闷响在 4.2 秒；不要出现清晰怪物形体，不要跳切。</pre></details></td><td><span class="badge badge-pending">待审</span></td>
+  <td>✗</td>
+</tr></table></div></section>
+<section id="thinking"><h2>思考记录</h2>
+<h3>组级</h3>
+<div class="think-card">
+  <h4>T001 / 组级 / G01
+    <span style="font-weight:400;color:var(--muted);font-size:11px;margin-left:8px">2026-11-02T23:40:00+08:00</span>
+  </h4>
+  <div class="tf"><span class="lbl">问题：</span>第一组怎么切分才能在 6 秒内交代犹豫？</div>
+  <div class="tf"><span class="lbl">理解：</span>用户要的是「不敢推」的心理过程，不是动作过程。</div>
+  <div class="tf"><span class="lbl">假设：</span><ul class="assum-list"><li><span class="ev-inferred">[inferred]</span> 铜门是湿的、有锈 — 用户未确认材质，按潮闸环境推定</li><li><span class="ev-user_confirmed">[user_confirmed]</span> 她不说话 — 用户说「她不敢出声」</li><li><span class="ev-measured">[measured]</span> 环境光偏冷 — 参考图取样，主光约 6500K</li></ul></div>
+  <div class="tf"><span class="lbl">方案：</span><ul class="opt-list"><li class="opt-other"><span>一镜 6 秒到底</span>  成本：1 次生成  风险：犹豫缺乏停顿，观众读不出来  理由：没有切点给停顿</li><li class="opt-chosen"><span>两镜 2.5+3.5 秒</span> <b style="color:var(--ok)">✓ 已选</b>  成本：1 次生成  风险：切点需精确到 2.5 秒  理由：在 2.5 秒处给一次纯静止的停顿</li><li class="opt-other"><span>三镜 2+2+2 秒</span>  成本：1 次生成  风险：碎片化，动作不连贯  理由：3.5 秒的台词放不下</li></ul></div>
+  <div class="tf"><span class="lbl">决定：</span>两镜 2.5+3.5 秒，切点落在手指悬停的最高点</div>
+  <div class="tf"><span class="lbl">重访条件：</span>用户提供实际场景参考图后</div>
+</div>
+<h3>整片级</h3>
+<div class="think-card">
+  <h4>T002 / 整片级 / film
+    <span style="font-weight:400;color:var(--muted);font-size:11px;margin-left:8px">2026-11-02T23:44:00+08:00</span>
+  </h4>
+  <div class="tf"><span class="lbl">问题：</span>门后的东西要不要露？</div>
+  <div class="tf"><span class="lbl">理解：</span>露了就变成怪物片，不露才留悬念。</div>
+  <div class="tf"><span class="lbl">假设：</span><ul class="assum-list"><li><span class="ev-user_confirmed">[user_confirmed]</span> 本单元不露面 — 用户明确「只给暗示」</li></ul></div>
+  <div class="tf"><span class="lbl">方案：</span><ul class="opt-list"><li class="opt-other"><span>完全空镜收尾</span>  成本：0  风险：观众可能没意识到有东西  理由：缺少听觉锚点</li><li class="opt-chosen"><span>空镜＋阴影掠过＋摩擦声</span> <b style="color:var(--ok)">✓ 已选</b>  成本：0  风险：阴影可能被读成污渍  理由：视觉与听觉双锚点</li></ul></div>
+  <div class="tf"><span class="lbl">决定：</span>只给阴影与声音，不出现形体</div>
+  <div class="tf"><span class="lbl">重访条件：</span>第二单元需要露脸时</div>
+</div>
+</section>
+<section id="reviews"><h2>审核记录</h2><div class="scroll"><table><tr>
+  <th>合同ID</th><th>层</th><th>目标</th><th>版本</th>
+  <th>结论</th><th>审核人</th><th>时间</th><th>入上下文</th><th>理由</th>
+</tr><tr class="rejected">
+  <td><code>S01-01-v001</code></td>
+  <td>shot</td>
+  <td>S01-01</td>
+  <td>1</td>
+  <td><span class="badge badge-ng">拒绝</span></td>
+  <td>user</td>
+  <td>2026-11-02T23:30:00+08:00</td>
+  <td>✗</td>
+  <td>手指数量画错了，且门环样式不符合潮闸环境</td>
+</tr><tr>
+  <td><code>S01-01-v002</code></td>
+  <td>shot</td>
+  <td>S01-01</td>
+  <td>2</td>
+  <td><span class="badge badge-ok">通过</span></td>
+  <td>user</td>
+  <td>2026-11-02T23:48:00+08:00</td>
+  <td>✓</td>
+  <td>手部修正通过</td>
+</tr><tr>
+  <td><code>S01-02-v001</code></td>
+  <td>shot</td>
+  <td>S01-02</td>
+  <td>1</td>
+  <td><span class="badge badge-pending">待审</span></td>
+  <td>待定</td>
+  <td>待定</td>
+  <td>✗</td>
+  <td>等待静态帧</td>
+</tr><tr>
+  <td><code>G01-v001</code></td>
+  <td>group</td>
+  <td>G01</td>
+  <td>1</td>
+  <td><span class="badge badge-ok">通过</span></td>
+  <td>user</td>
+  <td>2026-11-02T23:49:00+08:00</td>
+  <td>✓</td>
+  <td>组级切分与提示词通过</td>
+</tr><tr class="rejected">
+  <td><code>film-v001</code></td>
+  <td>film</td>
+  <td>film</td>
+  <td>1</td>
+  <td><span class="badge badge-ng">拒绝</span></td>
+  <td>user</td>
+  <td>2026-11-02T23:20:00+08:00</td>
+  <td>✗</td>
+  <td>整片基调偏亮，需要压暗两档</td>
+</tr></table></div></section>
+<section id="versions"><h2>版本历史</h2><p style="color:var(--muted)">暂无历史版本</p></section>
+<footer id="footer-sec">
+  <p>生成命令：<code>contract_html.py examples/contract-v1-demo.json --out examples/contract-demo.html</code></p>
+  <p>State 指纹（sha256前16）：<code>a1e40ce34e4a2c22</code></p>
+  <p>Schema：director-production/v3</p>
+</footer>
+</main>
+</body>
+</html>

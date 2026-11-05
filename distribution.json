@@ -1,0 +1,18 @@
+{
+  "name": "aigc-director-agent",
+  "version": "3.1.0-public.1",
+  "prepared_on": "2026-11-05",
+  "source_agent_version": "3.1.0",
+  "public_repository": "https://github.com/bzwh321/aigc-director-agent",
+  "ai_entrypoint": "AI_ENTRYPOINT.md",
+  "base_distribution": "public text/code package with a unified human-review contract pipeline",
+  "upstream_general_method_updates_included": true,
+  "media_included": false,
+  "credentials_supplied": false,
+  "paid_authorization_supplied": false,
+  "node_policy": "director_chooses_verified_plan",
+  "bundled_execution_nodes": false,
+  "bundled_provider_config": false,
+  "bundled_credential_environment_variables": false,
+  "retained_file_count": 170
+}

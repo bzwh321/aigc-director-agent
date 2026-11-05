@@ -1,0 +1,13 @@
+{
+  "schema":"director-grading-styles/v1",
+  "version":"1.0.0",
+  "default_style_id":"neutral-match",
+  "status":"documented_methods_not_render_validated",
+  "styles":[
+    {"id":"neutral-match","name":"中性校色与镜头匹配","aliases":["中性","neutral"],"version":"1.0.0","skill":"agents/color-grading/skills/grade-neutral-match/SKILL.md","kind":"technical_balance_and_matching"},
+    {"id":"arri-inspired","name":"ARRI观感参考","aliases":["ARRI","阿莱"],"version":"1.0.0","skill":"agents/color-grading/skills/grade-arri-inspired/SKILL.md","kind":"look_inspired_not_camera_transform"},
+    {"id":"s-cinetone-inspired","name":"S-Cinetone观感参考","aliases":["S-Cinetone","Sony人像"],"version":"1.0.0","skill":"agents/color-grading/skills/grade-s-cinetone-inspired/SKILL.md","kind":"look_inspired_not_camera_transform"},
+    {"id":"eterna-inspired","name":"ETERNA观感参考","aliases":["ETERNA","富士电影"],"version":"1.0.0","skill":"agents/color-grading/skills/grade-eterna-inspired/SKILL.md","kind":"look_inspired_not_camera_transform"},
+    {"id":"cool-industrial","name":"冷峻工业科幻","aliases":["冷峻科幻","冷工业"],"version":"1.0.0","skill":"agents/color-grading/skills/grade-cool-industrial/SKILL.md","kind":"creative_look"}
+  ]
+}

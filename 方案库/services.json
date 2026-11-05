@@ -1,0 +1,53 @@
+{
+  "schema": "director-service-index/v1",
+  "recorded_at": null,
+  "verification_boundary": "The public package registers capability slots only: no vendor, host, account or key is recorded. A slot becomes usable after the operator binds it locally.",
+  "services": [
+    {
+      "id": "local-compositing",
+      "kind": "local",
+      "name": "本地合成（无生成）",
+      "capabilities": [
+        "local_pan",
+        "local_edit"
+      ],
+      "credential_refs": []
+    },
+    {
+      "id": "provider-video-a",
+      "kind": "external",
+      "name": "外部视频生成能力槽 A",
+      "capabilities": [
+        "i2v",
+        "first_last",
+        "reference",
+        "edit",
+        "extend"
+      ],
+      "credential_refs": []
+    },
+    {
+      "id": "provider-video-b",
+      "kind": "external",
+      "name": "外部视频生成能力槽 B",
+      "capabilities": [
+        "i2v",
+        "reference"
+      ],
+      "credential_refs": []
+    },
+    {
+      "id": "provider-video-c",
+      "kind": "external",
+      "name": "外部视频生成能力槽 C",
+      "capabilities": [
+        "i2v",
+        "first_last",
+        "edit",
+        "extend",
+        "lipsync"
+      ],
+      "credential_refs": []
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "project": "示例长片",
+  "request": "九名机器人发现主角后围拢，做成20秒视频",
+  "intent": {
+    "audience_feeling": "先紧张后温暖",
+    "narrative_function": "让主角发现自己并非孤独"
+  },
+  "timing": {
+    "duration_seconds": 20
+  },
+  "cast": {
+    "count_lock": 9
+  }
+}

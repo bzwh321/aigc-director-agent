@@ -1,0 +1,14 @@
+# AIGC Director Agent
+
+> Chinese-first, AI-readable directing instructions with nine specialist roles, a three-level human-review contract and offline planning helpers. Core 3.1.0; public snapshot v3.1.0-public.1.
+
+## Start here
+- [AI entrypoint](https://raw.githubusercontent.com/bzwh321/aigc-director-agent/main/AI_ENTRYPOINT.md): Minimal reading order and integration boundaries.
+- [Director instructions](https://raw.githubusercontent.com/bzwh321/aigc-director-agent/main/AGENTS.md): Adaptive coordination and human review.
+- [Director skill](https://raw.githubusercontent.com/bzwh321/aigc-director-agent/main/SKILL.md): Scope and workflow entry.
+- [Role registry](https://raw.githubusercontent.com/bzwh321/aigc-director-agent/main/workflow_manifest.json): Exact specialist and skill paths; read only selected roles.
+- [V3 protocol](https://raw.githubusercontent.com/bzwh321/aigc-director-agent/main/workflows/director-control-v3.md): Shot-scoped context and project records.
+- [README](https://raw.githubusercontent.com/bzwh321/aigc-director-agent/main/README.md): Human setup, examples, validation and citation guidance.
+
+## Usage
+Read files before claiming to use them. Examples do not grant production approval. Generation tools and credentials are supplied by the user. Do not load every role or historical reference at once. Pin a full commit SHA for reproducible citations.

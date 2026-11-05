@@ -1,0 +1,40 @@
+{
+  "status": "offline_checks_passed",
+  "checked_on": "2026-11-05",
+  "distribution_version": "3.1.0-public.1",
+  "node_policy": "director_chooses_verified_plan",
+  "bundled_node_implementations": 0,
+  "preset_services": 4,
+  "preset_credential_entries": 0,
+  "media_files": 0,
+  "offline_tests": {
+    "passed": 150,
+    "skipped": 0,
+    "skip_reason": null,
+    "command": "cwd=tests; unittest discover -p test_*.py -t ."
+  },
+  "checks": {
+    "agent_structure": true,
+    "python_syntax_files": 27,
+    "json_files": 31,
+    "yaml_files": 5,
+    "skill_frontmatter_files": 28,
+    "entrypoint_links": true,
+    "sensitive_pattern_findings": 0,
+    "sender_absolute_path_findings": 0,
+    "historical_generation_preset_findings": 0,
+    "human_review_contract": true,
+    "context_gate": true
+  },
+  "sensitive_scan_scope": "All 201 public text and code files; credential patterns, private keys, local absolute paths and personal identifiers.",
+  "commands": [
+    "python -B scripts/validate_agent.py",
+    "python -B -m unittest discover -s tests -p \"test_*.py\"",
+    "python -B skills/cinematic-scene-daily/scripts/test_daily_scene.py"
+  ],
+  "not_tested": [
+    "Recipient-owned nodes and workflows",
+    "Actual media generation, dubbing or creative acceptance",
+    "External accounts, costs and production execution"
+  ]
+}

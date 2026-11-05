@@ -1,0 +1,20 @@
+# 自家猫 v004 生成提示词
+
+执行器：Codex 内置 GPT Image 2。执行日期：2026-10-15。输入三张自家猫照片、v003 花色连续性参考和橘白猫 v001 幼猫 Q 比例参考；调用一次，自动重试 0 次。
+
+```text
+Use case: photorealistic-natural
+Asset type: production character identity turnaround sheet for a vertical pet-video skill
+Primary request: Create a clean four-view identity sheet of an unmistakably kitten-like, strongly Q-proportioned version of the exact household cat in Images 1–3. It must look like this specific long-haired calico cat transformed into a very cute small kitten character, with the same markings and signature white neck ring, while keeping realistic photographic fur and real feline anatomy. Push the Q and kitten proportions clearly beyond Image 4; match or exceed the youthful cute proportions of Image 5.
+Input image roles: Images 1–3 are the real household cat and are the identity/color authority. Image 4 is the previous v003 consolidation for consistent facial mask, neck ring, body patches and tail only; do not inherit its adult/short-legged body proportions. Image 5 is Q-style and kitten-proportion reference only: borrow its oversized round head, large eyes, tiny compact torso, very short legs, small round paws and clear baby-kitten silhouette. Never borrow Image 5 orange-white coloration.
+Required age impression: first read must be a small kitten, not an adult cat with shortened legs. The head should be roughly 40 percent of standing height. Use a large round forehead, full baby cheeks, a small short muzzle, tiny chin, and slightly oversized upright kitten ears. Eyes are very large and round but still anatomically placed, with realistic pale-green irises, pupils, wet reflections and eyelids.
+Required body proportions: tiny compact fluffy torso, very short sturdy legs, small rounded white paws, soft juvenile belly, low ground clearance, stable realistic stance. Preserve a dramatically large, thick, feathered tail, creating a charming small-body/big-tail silhouette. The tail remains mostly dark black-brown with warm brown-copper transitions.
+Highest-priority identity anchor: preserve a continuous natural ring of long white fur all the way around the neck. In front it forms a broad fluffy white bib; in three-quarter and profile it visibly wraps behind the jaw and around the shoulders; in rear view it forms a clear unbroken white band across the back of the neck. It is fur coloration, never a collar, scarf or accessory.
+Face identity: pale green round eyes; asymmetric black/dark-brown tabby forehead and eye mask mixed with warm copper-orange patches; a small irregular light patch around part of the muzzle; long white whiskers; preserve asymmetry from the real photos.
+Body identity: dense long calico/tortoiseshell-and-white coat; broad black, deep chocolate-brown and warm copper-orange patches; white lower chest, belly-side areas and all four paws. Preserve the household cat's recognizable patch logic from Images 1–4 while adapting it to the kitten body.
+Scene/backdrop: seamless neutral light-gray photography studio, consistent soft diffused light, subtle grounded contact shadows.
+Composition/framing: orderly 2x2 turnaround sheet showing exactly four full-body depictions of the same kitten-Q identity: front, three-quarter front, left profile and rear. Identical kitten proportions, green eyes, facial asymmetry, continuous white neck ring, body markings and giant tail across views. Full ears, paws and tail visible.
+Style/medium: high-end photoreal photography of a real-world Q kitten; extremely cute, soft, fluffy and expressive while physically credible.
+Constraints: exactly four views of one kitten identity; mouth closed; no extra animals; no text, labels, borders, clothing, literal collar, scarf, props, watermark or room objects.
+Avoid: adult cat silhouette, adult head-to-body ratio, merely shortened adult legs, long torso, long legs, ordinary realistic adult proportions, generic orange-white kitten, borrowing Image 5 markings, missing rear white neck ring, small tail, flat Persian face, anime illustration, 3D cartoon, plush toy, plastic fur.
+```

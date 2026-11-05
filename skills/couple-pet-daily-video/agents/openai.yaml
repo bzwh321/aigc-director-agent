@@ -1,0 +1,4 @@
+interface:
+  display_name: "夫妻日常萌宠短片"
+  short_description: "用H3全模态原生有声把夫妻对话改编成猫猪竖屏短片"
+  default_prompt: "使用 $couple-pet-daily-video 把这段夫妻日常对话和场景整理成猫与小猪主演的竖屏短片，默认每个视频节点使用 H3 全模态原生有声生成，同步完成动作、对白和动物口型，并调用导演推进到下一项人审材料。"

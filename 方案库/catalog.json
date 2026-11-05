@@ -1,0 +1,152 @@
+{
+  "schema": "director-solutions/v1",
+  "version": "1.0.0",
+  "updated_at": "2026-10-12",
+  "recipes": [
+    {
+      "id": "local-still-pan",
+      "mode": "local_pan",
+      "name": "图片平移加现有音轨",
+      "services": [
+        "local-compositing"
+      ],
+      "status": "documented_method",
+      "use_when": "只需二维重构图，主体明确不动，无需真实三维位移",
+      "reject_when": "要求人物回头、行走、物体接触或真实三维视差",
+      "strategy": "motion",
+      "evidence": [
+        "../AGENTS.md"
+      ]
+    },
+    {
+      "id": "image-to-video",
+      "mode": "i2v",
+      "name": "单图锚定并生成运动",
+      "services": [
+        "provider-video-a",
+        "provider-video-b",
+        "provider-video-c"
+      ],
+      "status": "historical_project_evidence",
+      "use_when": "已有图且模型需要创造主体、环境或摄影机运动，没有硬尾帧合同",
+      "reject_when": "必须保持每个背景像素不变却要求生成式大幅运镜",
+      "strategy": "motion",
+      "evidence": [
+        "../references/subject-intent-motion-review.md"
+      ]
+    },
+    {
+      "id": "first-last-frame",
+      "mode": "first_last",
+      "name": "明确且兼容的首尾帧",
+      "services": [
+        "provider-video-a",
+        "provider-video-c",
+        "provider-video-b"
+      ],
+      "status": "historical_project_evidence",
+      "use_when": "首尾状态均为硬约束，端点兼容，中间动作简单",
+      "reject_when": "只是恰好有两张参考图；需要精确中间时刻；端点不兼容",
+      "strategy": "endpoints",
+      "evidence": [
+        "../references/static-generation-input-policy.md"
+      ]
+    },
+    {
+      "id": "multimodal-reference",
+      "mode": "reference",
+      "name": "多模态参考生成",
+      "services": [
+        "provider-video-b",
+        "provider-video-c",
+        "provider-video-a"
+      ],
+      "status": "historical_project_evidence",
+      "use_when": "多源身份/外观/动态样本各有职责，需要生成新画面而非保留原时间线",
+      "reject_when": "把普通参考图当硬时间戳，或把静态幻灯片当动态样本",
+      "strategy": "reference",
+      "evidence": [
+        "../references/subject-intent-motion-review.md"
+      ]
+    },
+    {
+      "id": "video-edit",
+      "mode": "edit",
+      "name": "保留现有运动的内容编辑",
+      "services": [
+        "provider-video-a",
+        "provider-video-c"
+      ],
+      "status": "documented_failure_boundary",
+      "use_when": "源视频已经包含要保留的运动，修改指定内容",
+      "reject_when": "希望 Edit 发明源中不存在的动作",
+      "strategy": "motion",
+      "evidence": [
+        "../references/action-continuity-shot-narrative.md"
+      ]
+    },
+    {
+      "id": "video-extend",
+      "mode": "extend",
+      "name": "已接受片段续写",
+      "services": [
+        "provider-video-a",
+        "provider-video-c"
+      ],
+      "status": "candidate_requires_capability_check",
+      "use_when": "已接受片段需要向后续写且服务明确支持",
+      "reject_when": "把重新生成当续写，或者实际端口不支持保留原片",
+      "strategy": "reference",
+      "evidence": [
+        "../references/action-continuity-shot-narrative.md"
+      ]
+    },
+    {
+      "id": "fixed-plate-local-reframe",
+      "mode": "i2v_then_local_pan",
+      "name": "固定镜头生成动作再本地裁切平移",
+      "services": [
+        "provider-video-b",
+        "provider-video-a",
+        "local-compositing"
+      ],
+      "status": "documented_method",
+      "use_when": "人物需要运动，背景几何需稳定且摄影机只做二维重构图",
+      "reject_when": "需要真实透视变化，或源图分辨率无法支持最终裁切",
+      "strategy": "locked-background",
+      "evidence": [
+        "../references/static-generation-input-policy.md"
+      ]
+    },
+    {
+      "id": "local-post",
+      "mode": "local_edit",
+      "name": "已生成视频的确定性合成",
+      "services": [
+        "local-compositing"
+      ],
+      "status": "historical_project_evidence",
+      "use_when": "已有视频，仅剪接、挂音轨、精确文字/Logo等，不需新生成像素",
+      "reject_when": "用二维贴片冒充需验收的手部接触或表演",
+      "strategy": "post",
+      "evidence": [
+        "../agents/color-grading/AGENTS.md"
+      ]
+    },
+    {
+      "id": "dialogue-lipsync",
+      "mode": "lipsync",
+      "name": "画面通过后原音驱动可见说话人",
+      "services": [
+        "provider-video-c"
+      ],
+      "status": "historical_project_evidence",
+      "use_when": "已有通过的视频、确定干声和可见说话人，需要口型修复",
+      "reject_when": "画外音、无可见嘴巴；未识别真实 faceId；把多人混音驱动一张脸",
+      "strategy": "dialogue",
+      "evidence": [
+        "../workflows/dialogue-lipsync-production.md"
+      ]
+    }
+  ]
+}

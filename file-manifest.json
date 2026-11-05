@@ -1,0 +1,866 @@
+{
+  "schema": "aigc-director-file-manifest/v1",
+  "generated_at": "2026-11-05T13:36:56+08:00",
+  "file_count": 170,
+  "by_extension": {
+    "(none)": 2,
+    ".html": 3,
+    ".json": 19,
+    ".md": 114,
+    ".py": 24,
+    ".txt": 3,
+    ".yaml": 5
+  },
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 14,
+      "sha256": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 244,
+      "sha256": "03bed8949abf3f4d3e0d67089cf48e0cc5c40b3cb5831a9a162e599661532507"
+    },
+    {
+      "path": "00-先读我-安装与使用.txt",
+      "bytes": 472,
+      "sha256": "deb2b60ca9d58d9ec03adc183f7ae93396b360420ff7ae95fc398538c6d7f58d"
+    },
+    {
+      "path": "01-对外整理说明.txt",
+      "bytes": 631,
+      "sha256": "2eefab097a3d21262393d8184d2797e34a9d028c43e788da4b177b7f08dc3b15"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 13537,
+      "sha256": "6141fcf62d6967334cf125770de8e0f7d71da5b5220d56f542307344b32339d9"
+    },
+    {
+      "path": "AI_ENTRYPOINT.md",
+      "bytes": 3732,
+      "sha256": "eeadd6b8be814c243b37d29c8a81b69a5860e15c6f0318b0a1dcd5d9f98f4a87"
+    },
+    {
+      "path": "README.md",
+      "bytes": 10283,
+      "sha256": "02f77fd7dfc073c38a4875615ce2f9913ce7a3d7d05ed1015be92d0e79c160ea"
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 4219,
+      "sha256": "8e69c14356eadb8a8dfcbca7aa5b009caa64b89f1ae1c20feb6f827f14f53449"
+    },
+    {
+      "path": "SOUL.md",
+      "bytes": 711,
+      "sha256": "c48ed8a3a6ea3ac1f0958177ce30ce7e6e1292df5124663bdd0c30914233138f"
+    },
+    {
+      "path": "agent.json",
+      "bytes": 1003,
+      "sha256": "17d5c3a87ad1a31a47c7c637f99bfc20ea87dfed4613b4c80e622055bb4ab67e"
+    },
+    {
+      "path": "agents/action-design/AGENTS.md",
+      "bytes": 1251,
+      "sha256": "23f8c30bba496ef1e98afc109556c69547460a7afc5a4245cf2c605a7fbfd845"
+    },
+    {
+      "path": "agents/action-design/skills/action-design/SKILL.md",
+      "bytes": 7329,
+      "sha256": "b0a8f40fc87ed757c13027eca29798dd12f2f018a08bed1bc7d0d0af9700a336"
+    },
+    {
+      "path": "agents/action-design/skills/action-design/references/action-package.md",
+      "bytes": 5054,
+      "sha256": "803b2725dbca7d1e10b996dbb4073e0c5236c0dc8255ef385da4de039cceaecb"
+    },
+    {
+      "path": "agents/action-design/skills/action-design/references/action-prompt-translation.md",
+      "bytes": 4567,
+      "sha256": "d9ac4ead8207f0a750d38a15c7517424efc265f68f8af58a95cffed8c91e32ef"
+    },
+    {
+      "path": "agents/action-design/skills/action-design/references/expression-action.md",
+      "bytes": 3093,
+      "sha256": "ebad71a5597d82037d68fc72fc3c460bde03b20c9f022c74aba0eeeeadad8329"
+    },
+    {
+      "path": "agents/action-design/skills/action-design/references/grapple-traction-sword-load.md",
+      "bytes": 3465,
+      "sha256": "975934b380db74eb17e3e60c03fc1db04dc3d9316e0f223aaefd86ce00b0048e"
+    },
+    {
+      "path": "agents/action-design/skills/action-design/references/motion-systems.md",
+      "bytes": 7297,
+      "sha256": "98662837480f69af8e913411a79077ea58f5d01c27572de13bc1bb1500b05fe7"
+    },
+    {
+      "path": "agents/action-design/skills/action-design/references/open-source-learning.md",
+      "bytes": 3498,
+      "sha256": "eb229b5449fa38fe6bcfbc5886a287a97a0f2cef428b8420d11720db240e3006"
+    },
+    {
+      "path": "agents/action-design/skills/action-design/references/pose-and-physical-experience.md",
+      "bytes": 4308,
+      "sha256": "d9d612cf8ecd876e2257d8d7df9a9770fc64b5bae5e23dd43e991ed351cb7334"
+    },
+    {
+      "path": "agents/action-design/skills/action-design/references/static-image-to-action.md",
+      "bytes": 5946,
+      "sha256": "9918120279dad06b24fd946731a503e5e40360ad484ab8f40dae1e0e2952ab96"
+    },
+    {
+      "path": "agents/action-design/skills/action-design/references/video-motion-analysis.md",
+      "bytes": 7766,
+      "sha256": "c769ee95d7a21255ec276ba03ee1775ec0d1f0677c9cc95fd01fd7aea1f9cd60"
+    },
+    {
+      "path": "agents/color-grading/AGENTS.md",
+      "bytes": 1245,
+      "sha256": "a0492c881927fa7d0e70e1f67c2e8c242f74601cd387a10d2e6549e1565c503d"
+    },
+    {
+      "path": "agents/color-grading/skills/color-grading/SKILL.md",
+      "bytes": 5193,
+      "sha256": "2c405e86c2bdab3b5487a0144563a4648a725ca761eccfc17a46b9204612a433"
+    },
+    {
+      "path": "agents/color-grading/skills/color-grading/references/camera-color-sources.md",
+      "bytes": 2717,
+      "sha256": "d1089669e540c33b4a47fdefa64651d45bd85fb596fa1d053c8c358d67cdcf41"
+    },
+    {
+      "path": "agents/color-grading/skills/color-grading/references/grading-package.md",
+      "bytes": 2304,
+      "sha256": "f07a455ea30f79b87ec8c0066dfac44b20ba4bc137ddcdb3e9842aa982388b07"
+    },
+    {
+      "path": "agents/color-grading/skills/color-grading/references/resolve-workflow.md",
+      "bytes": 4845,
+      "sha256": "3747d2a4413a4f87a1a660b4170449d518cb9f9b02f943b5706cfd91b15696c0"
+    },
+    {
+      "path": "agents/color-grading/skills/grade-arri-inspired/SKILL.md",
+      "bytes": 1432,
+      "sha256": "10c6d91f39618c6ecbcce7cae91df03f379fe67dc9711100f8537109479d220f"
+    },
+    {
+      "path": "agents/color-grading/skills/grade-cool-industrial/SKILL.md",
+      "bytes": 1397,
+      "sha256": "47d04902c35106746666994f7cad68b2b87c0ce026f1fe8d1581adda27fd3f6a"
+    },
+    {
+      "path": "agents/color-grading/skills/grade-eterna-inspired/SKILL.md",
+      "bytes": 1329,
+      "sha256": "e13d8889e70c220286124cd15edfb1f3f7a79457f615552c2b1eeb48868ccf24"
+    },
+    {
+      "path": "agents/color-grading/skills/grade-neutral-match/SKILL.md",
+      "bytes": 1336,
+      "sha256": "6cdd7bf406d970e10a16fb667c2a33030364b020255f5e44e7163e50f35d2937"
+    },
+    {
+      "path": "agents/color-grading/skills/grade-s-cinetone-inspired/SKILL.md",
+      "bytes": 1370,
+      "sha256": "49a7861950bd9883d111ae18fc181b9ef8e1c3213befdb5d0c304e9dca7b4721"
+    },
+    {
+      "path": "agents/color-grading/styles/catalog.json",
+      "bytes": 1277,
+      "sha256": "2beb619620be309a8b7423b227dc0b0618eb5d404d795ba3d6e67fb2027301b0"
+    },
+    {
+      "path": "agents/color-grading/styles/调色风格目录.md",
+      "bytes": 1290,
+      "sha256": "6f90872d5143444c01be13e48b9b093ad1f1ba613d9e39db2b6cc224e1a17dea"
+    },
+    {
+      "path": "agents/modeling-design/AGENTS.md",
+      "bytes": 2238,
+      "sha256": "9542cc755caf2835b58b76b9532dd942602f151a4a3074e46dc7c9bfedb9ddba"
+    },
+    {
+      "path": "agents/modeling-design/skills/blender-reference-blockout/SKILL.md",
+      "bytes": 6316,
+      "sha256": "d0695f986a58f268724a8756638acad4beb8aa8f3067e6247bffd3a4505e2328"
+    },
+    {
+      "path": "agents/modeling-design/skills/blender-reference-blockout/agents/openai.yaml",
+      "bytes": 346,
+      "sha256": "85379de2dd82900577d21d64fed9a5a3862f609ccdef732a21f7f5678f2e9405"
+    },
+    {
+      "path": "agents/modeling-design/skills/blender-reference-blockout/assets/modeling-contract.example.json",
+      "bytes": 1176,
+      "sha256": "d6cd5310e86f4e70e55d2e5b9704039790212d9ed79299cb2d54ba6a0cd33a91"
+    },
+    {
+      "path": "agents/modeling-design/skills/blender-reference-blockout/references/blender-operations.md",
+      "bytes": 4773,
+      "sha256": "e2133de84ddd0aa5bb7529fcd49ca5ba6374e043e27fe7a823043c1f7fab817c"
+    },
+    {
+      "path": "agents/modeling-design/skills/blender-reference-blockout/references/contract-and-delivery.md",
+      "bytes": 2751,
+      "sha256": "7bdb6ec35388d0ba70b70e870fb9db057f1f92203f07f45a21db9f059fae270f"
+    },
+    {
+      "path": "agents/modeling-design/skills/blender-reference-blockout/references/form-routing.md",
+      "bytes": 2900,
+      "sha256": "0ca527162270d7a2f80cefc614bb1aa4239ba7653ae25b40087512c21642a85b"
+    },
+    {
+      "path": "agents/modeling-design/skills/blender-reference-blockout/references/miniature-and-flexible.md",
+      "bytes": 2167,
+      "sha256": "16e42bd5b9ff243a726eb74a0b32c7fe2aac0d463a8c6ad54ff563d479355463"
+    },
+    {
+      "path": "agents/modeling-design/skills/blender-reference-blockout/references/reference-and-structure.md",
+      "bytes": 2706,
+      "sha256": "930014d976705f55552032b4487ca155861dca2aa09a0c614bd2e9299953205a"
+    },
+    {
+      "path": "agents/modeling-design/skills/blender-reference-blockout/references/scale-contact-review.md",
+      "bytes": 3215,
+      "sha256": "69a0147cf2b0ecd060ce650c778a8499392b4d0e479e47d1d81b9c21df649090"
+    },
+    {
+      "path": "agents/modeling-design/skills/blender-reference-blockout/scripts/blender_audit.py",
+      "bytes": 2723,
+      "sha256": "21ecc2e4bafa9bc0bf16a5631a2e9d955c334cb3e925aedbe470b713b3c99f07"
+    },
+    {
+      "path": "agents/modeling-design/skills/blender-reference-blockout/scripts/check_contract.py",
+      "bytes": 7820,
+      "sha256": "43574303823d344bb6c7753dea20e50d2036de9e17f24e2197ca44b7b9e0be7d"
+    },
+    {
+      "path": "agents/modeling-design/使用说明.html",
+      "bytes": 12906,
+      "sha256": "ef23fcec7682095ab47b1967d070059372accc09c824415e5407228b5710af1c"
+    },
+    {
+      "path": "agents/node-design/AGENTS.md",
+      "bytes": 929,
+      "sha256": "297480f2c9833260e444c55b21346e6320c94ef53e052644ec562afb8868c8a2"
+    },
+    {
+      "path": "agents/node-design/skills/node-design/SKILL.md",
+      "bytes": 3261,
+      "sha256": "c4b7ace786cef8676818d4bfe62a61a0dc459fbbe68355f2a388c9585916701b"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "bytes": 319,
+      "sha256": "1ce63c879a63ff278a7d21b81d0f63ee1d3726cdfb4c80f7d09ce9d85adc4f94"
+    },
+    {
+      "path": "agents/prompt-design/AGENTS.md",
+      "bytes": 661,
+      "sha256": "0d732e45ed164544741974a379e1a1b69bba48728d443e605865a3e950205410"
+    },
+    {
+      "path": "agents/prompt-design/skills/prompt-design/SKILL.md",
+      "bytes": 2758,
+      "sha256": "5f65f31b5785bd37a68c52fbb78f0e19773f9532fde415e26333798df60fd58f"
+    },
+    {
+      "path": "agents/scene-design/AGENTS.md",
+      "bytes": 6210,
+      "sha256": "c96f7d40cbad5738b22f9dd8232a1a2d6d7fad984967b53ec79b7ef2b4117ed8"
+    },
+    {
+      "path": "agents/scene-design/examples/order-and-breach.md",
+      "bytes": 3313,
+      "sha256": "c81fd685a14fe58aebebf941fb715b5cc72f9f50679b08a251f1701e746dfc0b"
+    },
+    {
+      "path": "agents/scene-design/references/learning-index.json",
+      "bytes": 6945,
+      "sha256": "3b785d4b8f4a320484d2f44f8b64356312105378b3e3b5bcbc49f4fc8b2d2a0b"
+    },
+    {
+      "path": "agents/scene-design/references/scene-calibration-accepted.md",
+      "bytes": 2638,
+      "sha256": "f16cd36fbd23818599ca329a9536c201aa60081458369c0b40c75f0872125ea4"
+    },
+    {
+      "path": "agents/scene-design/references/source-notes.md",
+      "bytes": 3593,
+      "sha256": "064adaf92a0607861d32f8eadf1e35c2b9810c486a34a17fe52394133b959692"
+    },
+    {
+      "path": "agents/scene-design/references/story-driven-scene-design.md",
+      "bytes": 3693,
+      "sha256": "27de265af0ed437ceb2bd1522f477c02a72eb17c0dd972704e2dd4953e0ca30e"
+    },
+    {
+      "path": "agents/scene-design/skills/scene-art-direction/SKILL.md",
+      "bytes": 2363,
+      "sha256": "e581090504226f1c80b9c48c08f4eefbd64b227687fd89573bd315c133f57186"
+    },
+    {
+      "path": "agents/scene-design/skills/scene-continuity/SKILL.md",
+      "bytes": 2016,
+      "sha256": "c8e3d9ded709ec8ae409dbfa4dcf59e290aea17debe1285b1775b31f4529ba9d"
+    },
+    {
+      "path": "agents/scene-design/skills/scene-design/SKILL.md",
+      "bytes": 5289,
+      "sha256": "13e37b28cbcf4e7b56ac90b451fed7c6091929f9122b3d5d5a8541c1f4575295"
+    },
+    {
+      "path": "agents/scene-design/skills/scene-narrative/SKILL.md",
+      "bytes": 4279,
+      "sha256": "f9bf17b9fb3cfa36615d49ca7c21998acc529141ac16ec2c4ca6ed0c0fd25685"
+    },
+    {
+      "path": "agents/scene-design/skills/scene-reference-learning/SKILL.md",
+      "bytes": 3448,
+      "sha256": "5020f05e341e1113a434f5a169de0d6c01e8b40e246895591b903d404caba679"
+    },
+    {
+      "path": "agents/scene-design/skills/scene-spatial-composition/SKILL.md",
+      "bytes": 2931,
+      "sha256": "fde2648c9a9ccc6e3d1a77595e371d7f9d40fd7301dcfcc26a0a5e4fe9c2e2cf"
+    },
+    {
+      "path": "agents/scene-design/skills/style-animation-2d/SKILL.md",
+      "bytes": 1341,
+      "sha256": "2f95214a088274e35965f0e99b324fa02c6c7381c4978e5b5f7462cfd99b05be"
+    },
+    {
+      "path": "agents/scene-design/skills/style-concept-art/SKILL.md",
+      "bytes": 1354,
+      "sha256": "7a1b1de658f64a4c120c787d5fadeee29300e7e7b126b4984144327964277fdf"
+    },
+    {
+      "path": "agents/scene-design/skills/style-photoreal-cinema/SKILL.md",
+      "bytes": 2332,
+      "sha256": "4e7e5b05f9e751c1f49d2423abe0ea2039d8232731ec421ad69e64dd8c6dcaf1"
+    },
+    {
+      "path": "agents/scene-design/skills/style-realistic-game/SKILL.md",
+      "bytes": 1557,
+      "sha256": "032df3ae23a111fb52a58a0a5fa70f25f1d60ac0ceb3b2a961b0214370dcac44"
+    },
+    {
+      "path": "agents/scene-design/skills/style-stylized-3d/SKILL.md",
+      "bytes": 1406,
+      "sha256": "f977ae53a92cc0aea30bdeb7dc613850e0ad18fca3fafb88b22569e7c54421f3"
+    },
+    {
+      "path": "agents/scene-design/styles/catalog.json",
+      "bytes": 2616,
+      "sha256": "6eb8989d1dc14f274c20a952add80f002a09d69ebcbc413e174ef24089f9e955"
+    },
+    {
+      "path": "agents/scene-design/styles/风格目录.md",
+      "bytes": 3100,
+      "sha256": "79fa60d7a1a6535d291143035fcb004d58cde2790a0e163384c71154591411e5"
+    },
+    {
+      "path": "agents/scene-design/templates/scene-package.md",
+      "bytes": 2553,
+      "sha256": "d646ea5098134d7a6ac168948d23ffd704f5b23ffacd775fa4ef60d32aa522f2"
+    },
+    {
+      "path": "agents/shot-design/AGENTS.md",
+      "bytes": 614,
+      "sha256": "9962e75a53fe78b9fd8d2e20e05cf41faf3cdc32f1e03f33b554d5f8172f3559"
+    },
+    {
+      "path": "agents/shot-design/skills/shot-design/SKILL.md",
+      "bytes": 2477,
+      "sha256": "e6f990d6eed2c6c9052be4d14844f2323284d5d1f994feba5766e82a83dcd2b2"
+    },
+    {
+      "path": "agents/shot-design/skills/shot-design/references/narrative-continuity.md",
+      "bytes": 3375,
+      "sha256": "303efacd94a52c4048918aa6e8cd212bb2335d31df0fe8f9c459b92cab205229"
+    },
+    {
+      "path": "agents/sound-design/AGENTS.md",
+      "bytes": 648,
+      "sha256": "a130b8b2cb8913435ddf300f9fa9e883b43ba199fd55abef5be0349bf97f9f37"
+    },
+    {
+      "path": "agents/sound-design/skills/sound-design/SKILL.md",
+      "bytes": 7702,
+      "sha256": "896d82e250f8a64bf17525c589e9472c12fdb4486d657e7a32080bdeed226b17"
+    },
+    {
+      "path": "agents/sound-design/skills/sound-design/references/distance-occlusion-translation.md",
+      "bytes": 4245,
+      "sha256": "7ca0c9202d10e2523386b9b94f2d53107e8df1481b1d76f591caa7684a45520f"
+    },
+    {
+      "path": "agents/sound-design/skills/sound-design/references/h3-native-speaker-format.md",
+      "bytes": 8276,
+      "sha256": "1a81a011a7da32722d9a85289bc6b2f819643998aa4f544c8f80c56fe0606979"
+    },
+    {
+      "path": "agents/sound-design/skills/sound-design/references/performance-translation.md",
+      "bytes": 4964,
+      "sha256": "53641388e1f90c92036fb46ebf19e3be7b3f7200dbd5da1b199b8c1e403ebb8e"
+    },
+    {
+      "path": "agents/sound-design/skills/sound-design/references/semantic-word-prosody.md",
+      "bytes": 4369,
+      "sha256": "94a9efb8637307bd2b90aa7350a0e27d721b47fa431876c6632f4637d1488083"
+    },
+    {
+      "path": "agents/vfx-design/AGENTS.md",
+      "bytes": 833,
+      "sha256": "f5ce5ff009959c7c307782f2a818b4d4421ceefcdf2872dac9ac1aab58e7fbbc"
+    },
+    {
+      "path": "agents/vfx-design/skills/vfx-design/SKILL.md",
+      "bytes": 2161,
+      "sha256": "84045d0924329ea6f8499416dd7e25152a5cdaa3c66faa51b148cdbc9378cea4"
+    },
+    {
+      "path": "ai-manifest.json",
+      "bytes": 1016,
+      "sha256": "c4fffc7fd3ff0e694bce07020509acb677a0f5cf9a66dc78900f03e764570522"
+    },
+    {
+      "path": "contract_html.py",
+      "bytes": 50914,
+      "sha256": "ffffa971b946911cd90f9da27462ff8ddca8a278df699034bafaf00ac38c616a"
+    },
+    {
+      "path": "director_control.py",
+      "bytes": 34788,
+      "sha256": "d53addeb02726b6f5b8c38da36a67fff246c3a23cb891417efa18beaba5fafc6"
+    },
+    {
+      "path": "distribution.json",
+      "bytes": 718,
+      "sha256": "17d812b96a48177f3472c02c3c5b34d038f278afb262558fc9615f1a59f40fd6"
+    },
+    {
+      "path": "examples/contract-demo.html",
+      "bytes": 19766,
+      "sha256": "dc234d97311644ba8316acefbed00dcc62f6d8f772b735f02e88346382ec207e"
+    },
+    {
+      "path": "examples/contract-v1-demo.json",
+      "bytes": 13647,
+      "sha256": "a1e40ce34e4a2c2286d961c5ac4fbb2236b394e7a127be8831909d6d5e61cc93"
+    },
+    {
+      "path": "examples/director-v2-demo.html",
+      "bytes": 7381,
+      "sha256": "f5d0caba59ad0ac508487544a9ef0a28dc32161211776b616f2a0a963f2002aa"
+    },
+    {
+      "path": "examples/director-v3-image-audio.json",
+      "bytes": 845,
+      "sha256": "1d0e7615a32382239cbca09856ac8a4a781ab5212a4c3dccb5ed224b74a8d507"
+    },
+    {
+      "path": "examples/production_state.json",
+      "bytes": 10154,
+      "sha256": "1e16d41e341d5d58c02c084af7240b3d5ded54898e9aa9bf9ef3c8ec83cf1d74"
+    },
+    {
+      "path": "file-manifest.json",
+      "bytes": 33170,
+      "sha256": "5b67025b08beaeab34417e5aa2b8486287f1007f815c5aac6b28e55123bc64d5"
+    },
+    {
+      "path": "llms.txt",
+      "bytes": 1399,
+      "sha256": "e48bbc9f9511aa0c0f96429bc45bed1092269ada7949f0b063bd79de390f0c44"
+    },
+    {
+      "path": "memory/decay.py",
+      "bytes": 173,
+      "sha256": "17709403b6c458d76f381dbb048b3f53d9f7d875dfc7be64f4735b96bdf09ffc"
+    },
+    {
+      "path": "memory/index.json",
+      "bytes": 585,
+      "sha256": "e028920c28fdd8be9141b153f0d32adcba132c6ab00e2b61ac01cf34faf8fb22"
+    },
+    {
+      "path": "memory/semantic/director-principles.md",
+      "bytes": 688,
+      "sha256": "5cc04f4eb5b895c4f77170d7c906904c93c805aee1fe837a70ecfac0b961db96"
+    },
+    {
+      "path": "outputs/artifact-map.md",
+      "bytes": 1114,
+      "sha256": "2128e364d6c54d03af41fe03b64a9cde1a6e453ba9f9c7bda631fc04b51cc5e5"
+    },
+    {
+      "path": "prompts/changelog.md",
+      "bytes": 706,
+      "sha256": "a8bf8d25b1c96b98eeec2cacf7dc9b27c2487c29054299e8f6628794e5222bc2"
+    },
+    {
+      "path": "prompts/index.py",
+      "bytes": 252,
+      "sha256": "2fcaa473c45f5daeb8ba3b84cf86ffe635b64f14342193348c55bcf1fe2a0d40"
+    },
+    {
+      "path": "prompts/tests/expected_output.md",
+      "bytes": 316,
+      "sha256": "e37ca97a60e3b785388de827fab81a57c8587936c849f5fae0f616c4487e33c0"
+    },
+    {
+      "path": "prompts/tests/sample_input.json",
+      "bytes": 329,
+      "sha256": "27544ad58f689b60af4ed4d40b9fb6fdbf895108c07587f8042fc203c6b48b51"
+    },
+    {
+      "path": "prompts/versions/v1_0_0.py",
+      "bytes": 2463,
+      "sha256": "76d5572b309687f75780e6f31fd3d81a244440f904ed105fab9eb9c87aff287a"
+    },
+    {
+      "path": "prompts/versions/v2_0_0.py",
+      "bytes": 1732,
+      "sha256": "216c8da1a236c50b9269195e4cd2607c501500f0f0268809ddd8c7ac4c3814d3"
+    },
+    {
+      "path": "prompts/versions/v3_0_0.py",
+      "bytes": 2154,
+      "sha256": "b7b0d468d2a94b0023103eb57a59a300026b687ffbb6e577d6f7a6bbcd979940"
+    },
+    {
+      "path": "references/action-continuity-shot-narrative.md",
+      "bytes": 9477,
+      "sha256": "a54a0d4210ab95b51d5b36121ca33cf2e4c897772d9af7f5314722638c5e5adc"
+    },
+    {
+      "path": "references/director-v2-legacy.md",
+      "bytes": 13620,
+      "sha256": "29242bf432d5ab84bad60192caa76b7c41292a5dd5a753ee7fe42b57690b21e3"
+    },
+    {
+      "path": "references/static-generation-input-policy.md",
+      "bytes": 2385,
+      "sha256": "90596e64b05e0a624d6a317a5b6f20f87a8216a560f25fac088e38a0c85516ec"
+    },
+    {
+      "path": "references/subject-intent-motion-review.md",
+      "bytes": 7603,
+      "sha256": "c769160b77fa995c89ccc1755eaa495628177b06d501a83ec7cd79a80f25fbc4"
+    },
+    {
+      "path": "scripts/demo_production.py",
+      "bytes": 1362,
+      "sha256": "ab75e2a9dc205ed9e0d3d507a2e6ff77fdfa697edad70b280f4649b0ace3ec34"
+    },
+    {
+      "path": "scripts/validate_agent.py",
+      "bytes": 3348,
+      "sha256": "36c06a38d20b58ebb71a7a35e5358b846285957da573aff992b7eac690c3daa4"
+    },
+    {
+      "path": "skills/cinematic-scene-daily/SKILL.md",
+      "bytes": 13089,
+      "sha256": "992320fbf1c759aef15cf0c3c585884a6521dd43a40af7437b8ee4b26c12e12c"
+    },
+    {
+      "path": "skills/cinematic-scene-daily/agents/openai.yaml",
+      "bytes": 336,
+      "sha256": "2e9675b24d2460368808a498dfbaf7f35ddd9fd94f4b9b74722d3a0a121a7211"
+    },
+    {
+      "path": "skills/cinematic-scene-daily/examples/first-episode.json",
+      "bytes": 10488,
+      "sha256": "6be67574ef6ce03a21fda5e2dc0b1bf314179692dfb8a2583d74e26c6c4b6e56"
+    },
+    {
+      "path": "skills/cinematic-scene-daily/references/bounded-retakes.md",
+      "bytes": 2891,
+      "sha256": "6426dba429d8b14d8962a0d5cde1c75064c98e56ad429cee46830b2e7c6b0274"
+    },
+    {
+      "path": "skills/cinematic-scene-daily/references/run-contract.md",
+      "bytes": 7426,
+      "sha256": "2fd6954a3f6c3eabfb78943dd371ccdc2d8b3503989877e6eb13a52479c532cc"
+    },
+    {
+      "path": "skills/cinematic-scene-daily/references/validation.md",
+      "bytes": 5001,
+      "sha256": "aecefb9a7df5eb6cb7f5719e9fcf67ded380bdaafb8d0c71de631e53197b32eb"
+    },
+    {
+      "path": "skills/cinematic-scene-daily/scripts/daily_scene.py",
+      "bytes": 21222,
+      "sha256": "a41fc69e3ba04dc60f1aacad1d2f9b069296a2f4141bbe11fbb3c01f3483427a"
+    },
+    {
+      "path": "skills/cinematic-scene-daily/scripts/test_daily_scene.py",
+      "bytes": 10551,
+      "sha256": "bc614d0ea8317d500ad3039e3c48a4a5ff6b0bafbce623228f7598434a7f5c54"
+    },
+    {
+      "path": "skills/couple-pet-daily-video/SKILL.md",
+      "bytes": 10575,
+      "sha256": "4bca26a6be0920d35b0755f326eb36aa902c37597ab8f1e768ac3ce422916fe6"
+    },
+    {
+      "path": "skills/couple-pet-daily-video/agents/openai.yaml",
+      "bytes": 436,
+      "sha256": "ff4592bae8b55870994d97be9ab91b64bd973e7e42f7702af5084c00868af139"
+    },
+    {
+      "path": "skills/couple-pet-daily-video/references/action-and-scene.md",
+      "bytes": 4857,
+      "sha256": "5d508674d6d612f3fdcf310b16b763c79933e5d914681d807aac21a4a6995973"
+    },
+    {
+      "path": "skills/couple-pet-daily-video/references/character-assets.md",
+      "bytes": 4665,
+      "sha256": "ae028279669d99de03eff1870f4433df5b7acfa5ed358527b2db75c9c4aa66a0"
+    },
+    {
+      "path": "skills/couple-pet-daily-video/references/character-compositing-prompts-v001.md",
+      "bytes": 7463,
+      "sha256": "22b7cd30a3003b4fbf32029c8799716d20d112b9f61667924c61baaa1706eb23"
+    },
+    {
+      "path": "skills/couple-pet-daily-video/references/character-compositing-prompts-v002.md",
+      "bytes": 7630,
+      "sha256": "7a81b09600ee5c99e21c52f6f18b65c3fe8987ae02dccfdb6ca988f246346580"
+    },
+    {
+      "path": "skills/couple-pet-daily-video/references/character-compositing-v001.md",
+      "bytes": 4564,
+      "sha256": "2a99a802980c30e1459fc2a0867b4af378275ff4d3eb1b3cf5d999d8f3e9d1a1"
+    },
+    {
+      "path": "skills/couple-pet-daily-video/references/character-compositing-v002.md",
+      "bytes": 2015,
+      "sha256": "6aae806647721ae492dfb475b76c8416a82d43d9dd5362ac6cb10225df57ae0b"
+    },
+    {
+      "path": "skills/couple-pet-daily-video/references/character-generation-prompts.md",
+      "bytes": 3783,
+      "sha256": "1d01eddf5fb6e15be5c3017689931b452a00943089b84b325ff21698dc1416cf"
+    },
+    {
+      "path": "skills/couple-pet-daily-video/references/dialogue-storyboard.md",
+      "bytes": 5453,
+      "sha256": "e42d7da4cd7ba7a93cdf08b343f92d5a13eeabc8d96e60c456b82016887ff440"
+    },
+    {
+      "path": "skills/couple-pet-daily-video/references/director-handoff.md",
+      "bytes": 5078,
+      "sha256": "8582b94cf309dc12e0ce88c46c6d945ac131797d6f2dd4118a68005472233ab6"
+    },
+    {
+      "path": "skills/couple-pet-daily-video/references/home-cat-generation-prompt-v002.md",
+      "bytes": 3673,
+      "sha256": "7bc85a75884cb98cd967e19fe90ea4b76e8954d3b5cdc445cb4c8b3775bf0aca"
+    },
+    {
+      "path": "skills/couple-pet-daily-video/references/home-cat-generation-prompt-v003.md",
+      "bytes": 3999,
+      "sha256": "15fdefe07d4aaae999fd111959dfc5b63d25cf0b7c7ff1429cbd09b2dc76d58a"
+    },
+    {
+      "path": "skills/couple-pet-daily-video/references/home-cat-generation-prompt-v004.md",
+      "bytes": 4186,
+      "sha256": "62e473b1a18f4ec064eb3c9e220a1a994c2259646695d33423f8e85500f4b2c7"
+    },
+    {
+      "path": "skills/couple-pet-daily-video/references/home-cat-generation-prompt-v005.md",
+      "bytes": 4307,
+      "sha256": "7985a71ce0951a1782df86502e10b9d29534db7387c4c1e8a30521f432cab731"
+    },
+    {
+      "path": "skills/couple-pet-daily-video/references/home-cat-redesign-v002.md",
+      "bytes": 3338,
+      "sha256": "ed044660ca9d782088e372b053f5542726d8bd6aefa43047e0aec73d0de570d8"
+    },
+    {
+      "path": "skills/couple-pet-daily-video/references/home-cat-redesign-v003.md",
+      "bytes": 3021,
+      "sha256": "7f6eff875d2b17613bd14159ef9a4624e566bd9b390574cbb29b52bfd226ebfd"
+    },
+    {
+      "path": "skills/couple-pet-daily-video/references/home-cat-redesign-v004.md",
+      "bytes": 3263,
+      "sha256": "056b50806c4869e2d017f245a17f985ceea3c7af9b12a29b5534d6ac9a2f0412"
+    },
+    {
+      "path": "skills/couple-pet-daily-video/references/home-cat-redesign-v005.md",
+      "bytes": 3589,
+      "sha256": "38bb7410e8c7569af6430cee5df501705dcf7353ba33c8a7b63a41a7924115f4"
+    },
+    {
+      "path": "skills/couple-pet-daily-video/references/scene-generation-prompts-v001.md",
+      "bytes": 5716,
+      "sha256": "973ab350dbdb93ea5e0cccdedcf5ea7e1910d844b02d6033963683fba7884521"
+    },
+    {
+      "path": "skills/couple-pet-daily-video/references/scene-tests-v001.md",
+      "bytes": 4027,
+      "sha256": "313d2f2d7a2878538d6d1e43d89d6b47665fe4d49d2172329606d183ee1a0fe8"
+    },
+    {
+      "path": "templates/budget-gate.md",
+      "bytes": 257,
+      "sha256": "676c42d5416be2d57e3bbe72a3582883dc22ad73ab3ef8ef17cf8c23ed6a8737"
+    },
+    {
+      "path": "templates/director-intake.md",
+      "bytes": 360,
+      "sha256": "6f6ed42b59981b1fa7f2067b96b0a5e65f70b2b1c5c40af3ae2cc58841c8219a"
+    },
+    {
+      "path": "templates/qa-review.md",
+      "bytes": 400,
+      "sha256": "946177216fb975d1084ed364de4732baad57e6fc59c2104e3a89660ad85b8a11"
+    },
+    {
+      "path": "templates/shot-contract.md",
+      "bytes": 281,
+      "sha256": "0f693068751f2ebf0814ee358f67c3149a736bf53eaf6972fc8f0dfdd4a244d4"
+    },
+    {
+      "path": "templates/workflow-design-brief.md",
+      "bytes": 287,
+      "sha256": "51a9c07a2e03f1858c62c35d50716fef5d72c5e7648f8c255bf8843d71500c83"
+    },
+    {
+      "path": "tests/test_agent.py",
+      "bytes": 2365,
+      "sha256": "c1b77fa5cd68f0a8acc975904b0147d577d0aa6505b94f76c3e49f1890f0a8ac"
+    },
+    {
+      "path": "tests/test_contract_gate.py",
+      "bytes": 15281,
+      "sha256": "52a51499c66eb5b312348aaf52ccf76c9eab328897e6035eeee388a3c318ebbf"
+    },
+    {
+      "path": "tests/test_contract_html.py",
+      "bytes": 9061,
+      "sha256": "1dd9e2e6adbe01139a8a247ebeac441ba637952bdcf8d89d59cb041c8a78575a"
+    },
+    {
+      "path": "tests/test_director_control.py",
+      "bytes": 18655,
+      "sha256": "333a31e51c62f0cd73abcaae53efb1e4e4bec3c26fd26c0e9c98c822860e019e"
+    },
+    {
+      "path": "tests/test_modeling_integration.py",
+      "bytes": 6931,
+      "sha256": "f16775d7b55c853dd4bcabc1fdd5bb6e02da6350716301aaff4a9190c9ab2a70"
+    },
+    {
+      "path": "tests/test_modeling_skill.py",
+      "bytes": 3691,
+      "sha256": "36540363ae4ccfa6703f4aaae98f01c58b6fa31499ac37da8adb4a37eabcaa70"
+    },
+    {
+      "path": "tests/test_post_production.py",
+      "bytes": 8094,
+      "sha256": "30d11f63f28972fb48299d06e59911722ba70ddf223c4af43bd8304d99ea82ba"
+    },
+    {
+      "path": "tests/test_production_v2.py",
+      "bytes": 5240,
+      "sha256": "aa2f2a96d720c7d1f2f344863c3c7e2a598385043d222e7205b1107b861344bb"
+    },
+    {
+      "path": "tests/test_solution_library.py",
+      "bytes": 7057,
+      "sha256": "2fa26af6f881b9a76cd00ae59c3607d68e7467b708e8603a0fbf8ff4987e883f"
+    },
+    {
+      "path": "validation-report.json",
+      "bytes": 1377,
+      "sha256": "98f4f4b5851657252ff4001c507ca21d998f444454d83d8b9caa04b05d80d83d"
+    },
+    {
+      "path": "workflow.py",
+      "bytes": 25323,
+      "sha256": "488db5fd156f89f69536533c57dcf48c7a2f016fbc36c2af3fd5bb79469f3807"
+    },
+    {
+      "path": "workflow_manifest.json",
+      "bytes": 15494,
+      "sha256": "967eaa6447224abb08eb562b8273f4d8eb87c2fc59756483fbae5a536a1f066c"
+    },
+    {
+      "path": "workflows/contract-v1.md",
+      "bytes": 10874,
+      "sha256": "891c7ba88c63f2597a011d6ff2f00756b5e2b74a5e686321fb471a04097299e3"
+    },
+    {
+      "path": "workflows/dialogue-lipsync-production.md",
+      "bytes": 3376,
+      "sha256": "803e221a14752a73fb39771f9e40c24777abb97a502183afa0f43bf286051c0a"
+    },
+    {
+      "path": "workflows/director-control-v3.md",
+      "bytes": 15555,
+      "sha256": "6ad54d6c9dcd8e207b4e1dbac201309f91fd11113e899e01298931ef7c4f6eb9"
+    },
+    {
+      "path": "workflows/grill-me-protocol.md",
+      "bytes": 2902,
+      "sha256": "11f854abbd04f323c4b2115437bf5d4940bd0ab2d54a1cabe84b30304f7fba0c"
+    },
+    {
+      "path": "workflows/post-production.md",
+      "bytes": 4882,
+      "sha256": "ebfec451ea8b9f708ddeee9b560ba2f1cecdc2cfe806a1453a60de0ae538ed7e"
+    },
+    {
+      "path": "workflows/production-v2.md",
+      "bytes": 4437,
+      "sha256": "eab2172cd7b7f8afde068cdea5c19badd3f9a6f9dc7c4e1c73937088cc5a412e"
+    },
+    {
+      "path": "workflows/topology.yaml",
+      "bytes": 606,
+      "sha256": "c846dfed1e79aad0e901ade1a628b8ad8acecd5564275aef8071398bce0a4ab0"
+    },
+    {
+      "path": "方案库/SKILL.md",
+      "bytes": 3072,
+      "sha256": "248979630d49ac6e017040b80127ae06e20d355133c51cc5f874a765f11f9a46"
+    },
+    {
+      "path": "方案库/catalog.json",
+      "bytes": 5202,
+      "sha256": "b00b4abd3f5aec46e10cdb3753519a3e0f874bdb46463b1930fc4d576d218a06"
+    },
+    {
+      "path": "方案库/credentials.json",
+      "bytes": 352,
+      "sha256": "496de72e6aa23ccc3c05bbd7a993c8a22495a94f4e8c927ae4d69248826432e4"
+    },
+    {
+      "path": "方案库/decide.py",
+      "bytes": 9524,
+      "sha256": "6a5f53e847bd8f09d4be22fc1ea9b47b0e027f2244911b97841f0da9dae9f5c6"
+    },
+    {
+      "path": "方案库/services.json",
+      "bytes": 1295,
+      "sha256": "3c8e52672e761c1ef97a6629d31170e314b6b72fae47ac39702f73cf58fdd1b9"
+    },
+    {
+      "path": "方案库/决策输入.md",
+      "bytes": 3262,
+      "sha256": "a4b8aebf3e143cf2966f56ec4e3db7538f727b4754f123d8128d393f7fa8100b"
+    },
+    {
+      "path": "方案库/经济提质.md",
+      "bytes": 2388,
+      "sha256": "51142868c4be8e34252eccecee2d995ee295a51882b272546cfcc1a1b5c30543"
+    }
+  ]
+}

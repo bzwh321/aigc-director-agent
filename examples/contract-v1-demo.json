@@ -1,0 +1,268 @@
+{
+  "schema_version": "director-production/v3",
+  "brief": {
+    "request": "第一单元：她推开潮闸之门，发现门后有活物",
+    "goal": "15 秒内交代犹豫、推门、光落在墙上、门后有动静",
+    "audio_mode": "design",
+    "visual_source": "create",
+    "subject_motion": "required",
+    "camera_motion": "缓慢推",
+    "render_mode": "generate",
+    "style_id": "photoreal-cinema",
+    "asset_ids": ["char-ling", "scene-gate"]
+  },
+  "units": [
+    {
+      "unit_id": "U01",
+      "title": "潮闸内部",
+      "goal": "让观众确认门后有活物，但不看见它",
+      "groups": [
+        {
+          "group_id": "G01",
+          "summary": "她停在门前，手抬起又放下",
+          "target_seconds": 6,
+          "video_node": "Seedance · reference",
+          "video_mode": "reference",
+          "group_prompt": "手部特写起，铜门占据画面右侧三分之二，缓慢推近；她抬手至门环，停顿，放下；冷蓝环境光，门缝透出一线暖光。",
+          "shot_ids": ["S01-01", "S01-02"]
+        },
+        {
+          "group_id": "G02",
+          "summary": "推门，光铺开，门后有动静",
+          "target_seconds": 9,
+          "video_node": "Seedance · first-last frame",
+          "video_mode": "first-last frame",
+          "group_prompt": "从首帧的门缝一线光到末帧的门开 30°、暖光铺满墙面；第 6 秒门轴吱呀，第 8 秒墙外传来一声湿滑的摩擦。",
+          "shot_ids": ["S01-03", "S01-04"]
+        }
+      ]
+    }
+  ],
+  "shots": [
+    {
+      "shot_id": "S01-01",
+      "group_id": "G01",
+      "summary": "手部特写，抬手停在门环前",
+      "duration_seconds": 2.5,
+      "audience_takeaway": "她在犹豫",
+      "framing": "特写",
+      "angle": "平视略俯",
+      "camera_motion": "极缓推",
+      "subject_action": "右手抬起→悬停门环上方→指节微颤",
+      "dialogue": [],
+      "sound_effects": [{"cue": "远处水滴回声", "at_seconds": 0.4}],
+      "static_frames": [
+        {"path": "图片/S01-晨潮之门-v001.png", "revision": "v001", "role": "首帧"},
+        {"path": "图片/S01-潮闸内部的东西-v002.png", "revision": "v002", "role": "尾帧"}
+      ],
+      "video_node": "Seedance · reference",
+      "video_mode": "reference",
+      "video_prompt": "特写，女性右手抬起悬停在铜制门环上方，指节微颤，冷蓝环境光，浅景深，缓慢推近。",
+      "final_prompt": "电影写实风格，35mm 镜头，浅景深，冷蓝环境光＋门缝暖光轮廓；女性右手（浅麦色皮肤，指节有旧疤）抬起悬停在铜制门环上方，指节微颤；背景铜门占画面三分之二，锈迹与潮气凝结；极缓推近，机位平视略俯；不要出现面部，不要出现怪物，不要快速运镜。",
+      "contract_id": "S01-01-v002"
+    },
+    {
+      "shot_id": "S01-02",
+      "group_id": "G01",
+      "summary": "手放下，人后退半步",
+      "duration_seconds": 3.5,
+      "audience_takeaway": "她还是不敢",
+      "framing": "中景",
+      "angle": "平视",
+      "camera_motion": "静止",
+      "subject_action": "手放下→重心后移→后退半步",
+      "dialogue": [
+        {"speaker": "她", "text": "……有人在吗？", "emotion": "试探、压低声音", "seconds": 2.0, "source": "estimated"}
+      ],
+      "sound_effects": [{"cue": "鞋底摩擦湿地面", "at_seconds": 3.0}],
+      "static_frames": [
+        {"path": "图片/S01-晨潮之门-v001.png", "revision": "v002", "role": "首帧"}
+      ],
+      "video_node": "Seedance · reference",
+      "video_mode": "reference",
+      "video_prompt": "中景，女性放下手臂、重心后移并后退半步，机位静止，冷蓝环境光。",
+      "final_prompt": "电影写实风格，50mm 镜头，中景全身入画；女性（深色湿发，藏青工装）放下手臂，重心后移，后退半步，肩线放松又绷紧；机位静止，平视；环境为锈蚀铜门与潮湿水泥墙；不要正面大特写，不要出现怪物。",
+      "contract_id": "S01-02-v001"
+    },
+    {
+      "shot_id": "S01-03",
+      "group_id": "G02",
+      "summary": "双手推门，门缝扩开",
+      "duration_seconds": 4.0,
+      "audience_takeaway": "门开了",
+      "framing": "中近景",
+      "angle": "背身过肩",
+      "camera_motion": "随门轻微横移",
+      "subject_action": "双手贴门→发力→门开 30°",
+      "dialogue": [],
+      "sound_effects": [
+        {"cue": "门轴吱呀", "at_seconds": 3.0},
+        {"cue": "金属回响", "at_seconds": 3.6}
+      ],
+      "static_frames": [
+        {"path": "图片/S01-潮闸内部的东西-v002.png", "revision": "v002", "role": "首帧"}
+      ],
+      "video_node": "Seedance · first-last frame",
+      "video_mode": "first-last frame",
+      "video_prompt": "背身过肩中近景，双手贴住铜门发力，门向内开启约 30 度，暖光从门缝铺开。",
+      "final_prompt": "电影写实风格，40mm 镜头，背身过肩中近景；女性双手贴住铜门发力，肩背肌肉绷紧，门向内开启约 30 度；门缝暖光逐渐铺到潮湿墙面，形成锐利光楔；机位随门轻微横移；第 3 秒门轴吱呀；不要出现门后的实体，不要过曝。",
+      "contract_id": "S01-03-v003"
+    },
+    {
+      "shot_id": "S01-04",
+      "group_id": "G02",
+      "summary": "光铺满墙，墙外传来摩擦声",
+      "duration_seconds": 5.0,
+      "audience_takeaway": "里面有东西在动",
+      "framing": "空镜",
+      "angle": "低角度",
+      "camera_motion": "极缓推",
+      "subject_action": "无主体；墙面上有阴影掠过",
+      "dialogue": [],
+      "sound_effects": [
+        {"cue": "湿滑摩擦声", "at_seconds": 3.0},
+        {"cue": "低频闷响", "at_seconds": 4.2}
+      ],
+      "static_frames": [
+        {"path": "图片/S02-沙海的阴影-v001.png", "revision": "v001", "role": "首帧"}
+      ],
+      "video_node": "Seedance · reference",
+      "video_mode": "reference",
+      "video_prompt": "空镜，暖光铺满潮湿墙面，一道模糊阴影沿墙掠过，极缓推近。",
+      "final_prompt": "电影写实风格，低角度空镜，暖光以光楔形态铺满潮湿混凝土墙面，水渍反光；第 3 秒一道模糊的、体型偏长的阴影沿墙掠过（不出现在焦内）；极缓推近；低频闷响在 4.2 秒；不要出现清晰怪物形体，不要跳切。",
+      "contract_id": "S01-04-v001"
+    }
+  ],
+  "thinking": [
+    {
+      "thinking_id": "T001",
+      "at": "2026-11-02T23:40:00+08:00",
+      "scope": "group",
+      "target_id": "G01",
+      "question": "第一组怎么切分才能在 6 秒内交代犹豫？",
+      "understood": "用户要的是「不敢推」的心理过程，不是动作过程。",
+      "assumptions": [
+        {"claim": "铜门是湿的、有锈", "evidence": "inferred", "note": "用户未确认材质，按潮闸环境推定"},
+        {"claim": "她不说话", "evidence": "user_confirmed", "note": "用户说「她不敢出声」"},
+        {"claim": "环境光偏冷", "evidence": "measured", "note": "参考图取样，主光约 6500K"}
+      ],
+      "options": [
+        {"option": "一镜 6 秒到底", "cost": "1 次生成", "risk": "犹豫缺乏停顿，观众读不出来", "chosen": false, "why": "没有切点给停顿"},
+        {"option": "两镜 2.5+3.5 秒", "cost": "1 次生成", "risk": "切点需精确到 2.5 秒", "chosen": true, "why": "在 2.5 秒处给一次纯静止的停顿"},
+        {"option": "三镜 2+2+2 秒", "cost": "1 次生成", "risk": "碎片化，动作不连贯", "chosen": false, "why": "3.5 秒的台词放不下"}
+      ],
+      "decision": "两镜 2.5+3.5 秒，切点落在手指悬停的最高点",
+      "open_questions": ["铜门的实际材质是否需要实测后再定"],
+      "revisit_when": "用户提供实际场景参考图后"
+    },
+    {
+      "thinking_id": "T002",
+      "at": "2026-11-02T23:44:00+08:00",
+      "scope": "film",
+      "target_id": "film",
+      "question": "门后的东西要不要露？",
+      "understood": "露了就变成怪物片，不露才留悬念。",
+      "assumptions": [
+        {"claim": "本单元不露面", "evidence": "user_confirmed", "note": "用户明确「只给暗示」"}
+      ],
+      "options": [
+        {"option": "完全空镜收尾", "cost": "0", "risk": "观众可能没意识到有东西", "chosen": false, "why": "缺少听觉锚点"},
+        {"option": "空镜＋阴影掠过＋摩擦声", "cost": "0", "risk": "阴影可能被读成污渍", "chosen": true, "why": "视觉与听觉双锚点"}
+      ],
+      "decision": "只给阴影与声音，不出现形体",
+      "open_questions": [],
+      "revisit_when": "第二单元需要露脸时"
+    }
+  ],
+  "contracts": [
+    {
+      "contract_id": "S01-01-v001",
+      "scope": "shot",
+      "target_id": "S01-01",
+      "revision": 1,
+      "decision": "rejected",
+      "reviewer": "user",
+      "decided_at": "2026-11-02T23:30:00+08:00",
+      "reason": "手指数量画错了，且门环样式不符合潮闸环境",
+      "fingerprint": "0000000000000000000000000000000000000000000000000000000000000000",
+      "context_eligible": false,
+      "files": [{"path": "图片/S01-晨潮之门-v001.png", "sha256": "a1b2c3d4e5f60718"}]
+    },
+    {
+      "contract_id": "S01-01-v002",
+      "scope": "shot",
+      "target_id": "S01-01",
+      "revision": 2,
+      "decision": "approved",
+      "reviewer": "user",
+      "decided_at": "2026-11-02T23:48:00+08:00",
+      "reason": "手部修正通过",
+      "fingerprint": "f906df9077cf433c7a0a57a32e852851b5033e026c9b59cf9a8c71b6b0b6fe21",
+      "context_eligible": true,
+      "files": [{"path": "图片/S01-晨潮之门-v001.png", "sha256": "a1b2c3d4e5f60718"}]
+    },
+    {
+      "contract_id": "S01-02-v001",
+      "scope": "shot",
+      "target_id": "S01-02",
+      "revision": 1,
+      "decision": "pending",
+      "reviewer": null,
+      "decided_at": null,
+      "reason": "等待静态帧",
+      "fingerprint": "",
+      "context_eligible": false,
+      "files": []
+    },
+    {
+      "contract_id": "G01-v001",
+      "scope": "group",
+      "target_id": "G01",
+      "revision": 1,
+      "decision": "approved",
+      "reviewer": "user",
+      "decided_at": "2026-11-02T23:49:00+08:00",
+      "reason": "组级切分与提示词通过",
+      "fingerprint": "aaaa1111bbbb2222cccc3333dddd4444aaaa1111bbbb2222cccc3333dddd4444",
+      "context_eligible": true,
+      "files": []
+    },
+    {
+      "contract_id": "film-v001",
+      "scope": "film",
+      "target_id": "film",
+      "revision": 1,
+      "decision": "rejected",
+      "reviewer": "user",
+      "decided_at": "2026-11-02T23:20:00+08:00",
+      "reason": "整片基调偏亮，需要压暗两档",
+      "fingerprint": "bbbb2222cccc3333dddd4444eeee5555bbbb2222cccc3333dddd4444eeee5555",
+      "context_eligible": false,
+      "files": []
+    }
+  ],
+  "facts": [
+    {"id": "fact-door-material", "summary": "铜门表面有锈与潮气凝结", "roles": ["scene-design", "prompt-design"], "topics": ["材质", "场景"], "shot_ids": ["S01-01", "S01-03"], "source": "inferred", "status": "待核对"},
+    {"id": "fact-shadow-only", "summary": "本单元不出现门后实体，只给阴影与声音", "roles": ["shot-design", "prompt-design", "sound-design"], "topics": ["叙事", "约束"], "shot_ids": [], "source": "user_confirmed", "status": "user_confirmed"}
+  ],
+  "memories": [
+    {"id": "mem-hesitation-cutting", "summary": "犹豫要靠在动作最高点切一刀，切在静止处读不出来", "roles": ["shot-design", "action-design"], "topics": ["动作", "剪辑"], "shot_ids": [], "source": "verified-local-project-experience", "status": "active-rule"}
+  ],
+  "assets": [
+    {"id": "char-ling", "kind": "character", "summary": "主角凌，深色湿发、藏青工装，右手背有旧疤", "roles": ["shot-design", "scene-design", "prompt-design"], "topics": ["人物"], "shot_ids": ["S01-01", "S01-02", "S01-03"], "source": "user_confirmed", "status": "user_confirmed",
+     "images": [{"path": "图片/S01-晨潮之门-v001.png", "role": "外观参考", "sha256": "a1b2c3d4e5f60718"}]},
+    {"id": "scene-gate", "kind": "scene", "summary": "潮闸内部：锈蚀铜门、潮湿混凝土、冷蓝环境光＋门缝暖光", "roles": ["scene-design", "prompt-design"], "topics": ["场景"], "shot_ids": ["S01-01", "S01-03", "S01-04"], "source": "user_confirmed", "status": "user_confirmed",
+     "images": [{"path": "图片/S01-潮闸内部的东西-v002.png", "role": "空间参考", "sha256": "b2c3d4e5f6071829"}]},
+    {"id": "prop-ring", "kind": "prop", "summary": "铜门环，兽首衔环式样，直径约 18cm", "roles": ["scene-design"], "topics": ["道具"], "shot_ids": ["S01-01"], "source": "inferred", "status": "待核对", "images": []},
+    {"id": "world-chaozha", "kind": "background", "summary": "潮闸会在落潮后三小时内开启，闸内是旧时代的排水层；此处无电力，只有漫反射天光与门后一线暖光。", "roles": ["scene-design", "shot-design"], "topics": ["世界观"], "shot_ids": [], "source": "user_confirmed", "status": "user_confirmed", "images": []}
+  ],
+  "artifacts": {
+    "static_images": {"revision": "v002", "summary": "第一单元静态帧", "files": [
+      {"path": "图片/S01-晨潮之门-v001.png", "shot_ids": ["S01-01", "S01-02"]},
+      {"path": "图片/S01-潮闸内部的东西-v002.png", "shot_ids": ["S01-01", "S01-03"]}
+    ]}
+  },
+  "reviews": {},
+  "completed_calls": {},
+  "issues": []
+}

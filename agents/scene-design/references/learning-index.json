@@ -1,0 +1,148 @@
+{
+  "schema": "scene-learning-index/v1",
+  "updated_at": "2026-10-11",
+  "learning_mode": "task_triggered_not_background",
+  "entries": [
+    {
+      "id": "local-scene-manual-20261007",
+      "problem": "复杂场景怎样增加层次而不变乱",
+      "summary": "先大形和观看顺序，再接续通路、遮挡与尺度，最后加有功能和因果的细节。",
+      "topics": [
+        "composition",
+        "space",
+        "art_direction"
+      ],
+      "source": "<PROJECT_ROOT>/配色与复杂场景构建_参考图逆向拆解与制作手册_v1.0.md",
+      "author": "本地课程制作记录",
+      "accessed_at": "2026-10-11",
+      "status": "source_checked",
+      "applies_to": "复杂环境、层次与配色设计",
+      "not_universal": "三层、配色比例、远景明度、低饱和和评分阈值不固定",
+      "validation": "原手册部分为参考逆向推断与未出图练习，不概括为普遍实证"
+    },
+    {
+      "id": "local-visual-center-20260905",
+      "problem": "场景元素齐全但叙事关系读不出来",
+      "summary": "先明确第一眼必须读到的关系，区分内部意图与可见实体，参考各有控制职责。",
+      "topics": [
+        "story",
+        "composition",
+        "continuity"
+      ],
+      "source": "D:/知识库/knowledge/docs/技术资料/AIGC视觉生成与D5课程/00-课程研发笔记/20260905-从六层拆解到视觉生成控制系统-v0.1.md",
+      "author": "本地课程研发笔记",
+      "accessed_at": "2026-10-11",
+      "status": "source_checked",
+      "applies_to": "复杂构图和多参考设计",
+      "not_universal": "不能把人物主导的案例套为所有环境必须弱化背景",
+      "validation": "含特定案例实测与未解决事项，复用时保留边界"
+    },
+    {
+      "id": "gdc-environmental-storytelling-2010",
+      "problem": "怎样让环境支持观众推断发生了什么",
+      "summary": "从事件线索与观众解释出发，设计有历史感的空间。",
+      "topics": [
+        "story",
+        "environment_narrative"
+      ],
+      "source": "https://www.gdcvault.com/play/1012696/What-Happened-Here-Environmental",
+      "author": "Harvey Smith; Matthias Worch",
+      "accessed_at": "2026-10-11",
+      "evidence": "official_session_overview_only",
+      "status": "source_checked",
+      "applies_to": "环境叙事与隐含事件",
+      "not_universal": "游戏探索需要转译到镜头可见范围与时间；不能保证唯一解读",
+      "validation": "尚未做本项目观众阅读验证"
+    },
+    {
+      "id": "epic-balinese-temple-2019",
+      "problem": "如何从场所故事走向可制作环境",
+      "summary": "从文化和故事意图展开参考与粗体块设计，再发展资产与光照。",
+      "topics": [
+        "story",
+        "space",
+        "art_direction"
+      ],
+      "source": "https://www.unrealengine.com/tech-blog/balinese-temple-telling-a-powerful-story-through-ue4-environments?lang=en-US",
+      "author": "Brian Lesiangi",
+      "accessed_at": "2026-10-11",
+      "evidence": "creator_breakdown",
+      "status": "source_checked",
+      "applies_to": "有明确场所文化的环境概念流程",
+      "not_universal": "案例配色公式及引擎参数不可固定照搬",
+      "validation": "迁移到当前项目尚待具体应用"
+    },
+    {
+      "id": "epic-environment-artist-2021",
+      "problem": "场景角色是否只负责单图",
+      "summary": "环境艺术结合世界构建、可读性、复用资产、材料和光照。",
+      "topics": [
+        "world",
+        "art_direction",
+        "continuity"
+      ],
+      "source": "https://www.unrealengine.com/blog/what-is-an-environment-artist",
+      "author": "Epic Games",
+      "accessed_at": "2026-10-11",
+      "evidence": "official_role_description",
+      "status": "source_checked",
+      "applies_to": "角色职责划分",
+      "not_universal": "职责概述不等于某个模型已拥有全部执行能力",
+      "validation": "不作为媒体生成验证"
+    },
+    {
+      "id": "order-and-breach-demo",
+      "problem": "有序建筑中的局部破损如何支持剧情暗示",
+      "summary": "先让正常秩序可辨，再用局部中断及相关证据支持变化的解读，同时检查老化/事故等可能误读。",
+      "topics": [
+        "story",
+        "environment_narrative",
+        "composition"
+      ],
+      "source": "../examples/order-and-breach.md",
+      "author": "基于用户本次方向整理的教学方案",
+      "accessed_at": "2026-10-11",
+      "status": "candidate",
+      "applies_to": "剧情需要秩序受到扰动且镜头能读到对比时",
+      "not_universal": "破损不固定表示人为破坏或规矩被打破",
+      "validation": "未生成图、未做人审阅读测试"
+    },
+    {
+      "id": "story-driven-scene-design",
+      "problem": "怎样从故事推导场景，而不是积累具体视觉元素",
+      "summary": "先明确叙事任务与人物处境，再推导场所逻辑和当前状态，把状态转为可见关系，组织观众的发现过程，并用因果一致性与人审理解修订。",
+      "topics": [
+        "story",
+        "environment_narrative",
+        "emotion",
+        "composition"
+      ],
+      "source": "story-driven-scene-design.md",
+      "author": "依据用户本轮指导与纠正整理",
+      "accessed_at": "2026-10-11",
+      "status": "project_validated",
+      "evidence": "user_confirmed_design_method",
+      "applies_to": "需要把剧情、人物处境和情绪融入场景的设计决策",
+      "not_universal": "不把案例物件、具体痕迹、光色或前中后分配写成通用配方",
+      "validation": "本轮《借潮》静态场景获用户认可；验证仅限本案例，不推广为全部题材。故事创作属于上游，本角色只做视觉转译。",
+      "validation_source": "scene-calibration-accepted.md"
+    },
+    {
+      "id": "scene-calibration-accepted",
+      "problem": "场景Skill验收后保留什么能力、交回什么职责",
+      "summary": "接收上游故事与情绪，保持同一因果，把空间层级、尺度、细节与摄影组织成可读画面。只沉淀转译方法，具体元素留在案例。",
+      "topics": [
+        "story",
+        "environment_narrative",
+        "composition"
+      ],
+      "source": "scene-calibration-accepted.md",
+      "author": "本任务用户验收",
+      "accessed_at": "2026-10-11",
+      "status": "project_validated",
+      "applies_to": "既定叙事的静态场景设计",
+      "not_universal": "不代表所有题材、风格或视频连续性均已验证",
+      "validation": "《借潮》用户确认通过；角色不再代行故事创作"
+    }
+  ]
+}

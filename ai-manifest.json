@@ -1,0 +1,34 @@
+{
+  "schema_version": "aigc-director-public/v1",
+  "name": "AIGC Director Agent",
+  "repository": "https://github.com/bzwh321/aigc-director-agent",
+  "version": "3.1.0-public.1",
+  "core_version": "3.1.0",
+  "snapshot_date": "2026-11-05",
+  "language": "zh-CN",
+  "entrypoint": "AI_ENTRYPOINT.md",
+  "reading_order": [
+    "AGENTS.md",
+    "SKILL.md",
+    "workflow_manifest.json"
+  ],
+  "role_registry": "workflow_manifest.json",
+  "workflow_protocol": "workflows/director-control-v3.md",
+  "host_ai_required": true,
+  "automatic_model_calls": false,
+  "bundled_media": false,
+  "bundled_execution_nodes": false,
+  "bundled_credentials": false,
+  "automatic_retry": false,
+  "human_checkpoints": [
+    "static_images",
+    "contract",
+    "final"
+  ],
+  "validation_report": "validation-report.json",
+  "citation": {
+    "repository": "https://github.com/bzwh321/aigc-director-agent",
+    "version_ref": "v3.1.0-public.1",
+    "pin_full_commit_sha_for_reproducibility": true
+  }
+}

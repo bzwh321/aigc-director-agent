@@ -1,0 +1,19 @@
+# 自家猫 v003 生成提示词
+
+执行器：Codex 内置 GPT Image 2。执行日期：2026-10-15。输入三张自家猫照片作为身份参考、橘白猫 v001 作为 Q 版比例参考；调用一次，自动重试 0 次。
+
+```text
+Use case: photorealistic-natural
+Asset type: production character identity turnaround sheet for a vertical pet-video skill
+Primary request: Create a clean four-view identity sheet of a strongly Q-proportioned, irresistibly cute but still photographically realistic version of the exact household cat in Images 1–3. Match the obvious big-head, round-face, short-leg, compact-body Q proportions of Image 4, while preserving the household cat's identity completely. The result should feel like this specific cat transformed into the same kind of cute realistic Q character as Image 4, not like an ordinary adult-cat photo.
+Input image roles: Images 1–3 are the only identity and color-pattern authority. Image 1 locks the pale green eyes, rounded face, asymmetric dark-and-copper mask, white chest and white forepaws. Image 2 locks the long-haired rounded body, black/deep-brown/copper back patches, continuous white neck ring and huge plume tail. Image 3 reinforces forehead tabby pattern, ears, whiskers, muzzle and white paws. Image 4 is proportion/style reference only: use its noticeably oversized round head, large eyes, compact short body, short legs, clear cute silhouette and realistic photographic fur. Do not inherit any orange-white coloration or facial markings from Image 4.
+Q proportions: head visibly about 25–30 percent larger relative to the body than the real adult cat; rounder cheeks; slightly shorter muzzle without becoming flat-faced; large expressive pale green eyes with real iris, pupil and reflections; very compact rounded fluffy torso; distinctly short sturdy legs and small real white paws. The body may read as a stylized young-looking mascot version, but identity must remain the same household cat.
+Highest-priority identity anchor: a continuous natural ring of long white fur encircling the entire neck. In front it becomes a broad fluffy white bib; from both side views it visibly wraps around; in the rear view it forms a clear unbroken white band across the back of the neck/shoulders. This is fur coloration, not a collar, scarf or accessory, and it must never disappear.
+Face identity: pale green round eyes; asymmetric black/dark-brown tabby face with warm copper-orange patches; small irregular light area around part of the muzzle; long white whiskers; medium pointed ears. Keep the asymmetry from the real photos.
+Body identity: dense long calico/tortoiseshell-and-white coat; broad patches of black, deep chocolate-brown and warm copper-orange; white lower chest, belly-side areas and all four paws; extremely full feathered tail, mostly dark with warm brown-copper transitions. Keep the tail large and heavy even with the compact Q body.
+Scene/backdrop: seamless neutral light-gray photography studio, soft diffused lighting and gentle natural contact shadows.
+Composition/framing: orderly 2x2 turnaround sheet with exactly four depictions of the same Q cat: front, three-quarter front, left profile and rear. Identical scale, Q proportions, eye color, facial asymmetry, continuous white neck ring and body patch layout in every view. Full ears, paws and tail visible.
+Style/medium: high-end photoreal animal photography of a real-world Q-proportioned cat; natural fur strands and whiskers; cute, soft and expressive.
+Constraints: exactly four views of one cat identity; mouth closed; no extra animals; no text, labels, borders, clothes, literal collar, scarf, props, watermark or room objects.
+Avoid: ordinary adult-cat body proportions, long normal-length legs, realistic adult head-to-body ratio, generic orange-white kitten, borrowing Image 4 markings, short-haired cat, missing rear white neck band, symmetrical mask, flat Persian face, tiny tail, anime illustration, 3D cartoon, plush toy, plastic fur.
+```

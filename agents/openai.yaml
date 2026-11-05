@@ -1,0 +1,7 @@
+interface:
+  display_name: "AIGC Director"
+  short_description: "Coordinate storyboard, sound, scene, action, prompts and nodes"
+  default_prompt: "Use $aigc-director to translate my film requirements into director intent and coordinate versioned specialist design handoffs."
+
+policy:
+  allow_implicit_invocation: true

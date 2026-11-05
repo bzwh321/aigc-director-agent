@@ -1,0 +1,32 @@
+{
+  "id": "aigc-director",
+  "display_name": "AIGC导演",
+  "version": "3.1.0",
+  "role": "理解人的需求，按需统筹前期/生成设计、三维白模、特效与调色角色的导演总控",
+  "entrypoint": "AGENTS.md",
+  "workflow": "workflow.py",
+  "manifest": "workflow_manifest.json",
+  "skill": "SKILL.md",
+  "triggers": [
+    "AIGC导演",
+    "Grill Me",
+    "视频工作流设计",
+    "Seedance",
+    "ComfyUI电影分镜",
+    "多人动作",
+    "长运镜",
+    "减少抽卡"
+  ],
+  "permissions": {
+    "local_read": true,
+    "local_write": true,
+    "paid_generation": "explicit_confirmation_required",
+    "external_upload": "explicit_confirmation_required",
+    "automatic_retry": false
+  },
+  "production_schema": "director-production/v3",
+  "specialist_registry": "workflow_manifest.json",
+  "solution_library": "方案库/SKILL.md",
+  "execution_mode": "adaptive_roles_shot_context_three_human_reviews",
+  "last_validated": "2026-11-05"
+}

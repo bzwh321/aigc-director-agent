@@ -1,0 +1,349 @@
+{
+  "schema_version": "director-production/v2",
+  "project_id": "airport-teaching-demo",
+  "example_only": true,
+  "notice": "人工编写的流程演示：音频时长、素材路径和节点名均为示例，不代表实际生成。",
+  "artifacts": {
+    "director_intent": {
+      "revision": 1,
+      "status": "accepted",
+      "owner": "director",
+      "approved_by": "director-demo",
+      "inputs": {},
+      "input_hashes": {},
+      "data": {
+        "user_request": "演示：机场旅客走向店铺，画外音说“让旅途，轻柔落地”，随后取出一张纸巾。",
+        "interpretation": "用旅途中由忙到缓的变化表达柔软感。中景交代旅客与店铺关系，手部特写证明真实接触。",
+        "audience_feeling": "从忙碌转为放松",
+        "perspective": "第三人称观察，避免突然正面摆拍",
+        "constraints": [
+          "同一旅客、同一个黑箱",
+          "只抽一张纸巾",
+          "品牌文字后期完成"
+        ],
+        "has_dialogue": true
+      }
+    },
+    "shot_design": {
+      "revision": 1,
+      "status": "accepted",
+      "owner": "shot-design",
+      "approved_by": "director-demo",
+      "inputs": {
+        "director_intent": 1
+      },
+      "input_hashes": {
+        "director_intent": "65eb8ee508dd7787b44777e0447b4f3d0fa41ee6e1206a541c96991980d1dfa5"
+      },
+      "data": {
+        "shots": [
+          {
+            "shot_id": "S01",
+            "purpose": "建立人物与目的地",
+            "shot_size": "中景",
+            "perspective": "右后方跟随",
+            "duration_seconds": 4,
+            "has_dialogue": true,
+            "transition": "视线与动作衔接"
+          },
+          {
+            "shot_id": "S02",
+            "purpose": "展示单张取纸接触",
+            "shot_size": "手部特写",
+            "perspective": "侧前方",
+            "duration_seconds": 3,
+            "has_dialogue": false,
+            "transition": "稳定手部结束"
+          }
+        ]
+      }
+    },
+    "sound_design": {
+      "revision": 1,
+      "status": "accepted",
+      "owner": "sound-design",
+      "approved_by": "director-demo",
+      "inputs": {
+        "director_intent": 1
+      },
+      "input_hashes": {
+        "director_intent": "65eb8ee508dd7787b44777e0447b4f3d0fa41ee6e1206a541c96991980d1dfa5"
+      },
+      "data": {
+        "has_dialogue": true,
+        "dialogue": [
+          {
+            "line_id": "L01",
+            "speaker": "旁白",
+            "text": "让旅途，轻柔落地。",
+            "duration_seconds": 3.2,
+            "measured": true,
+            "audio_path": "DEMO_ONLY/approved_voice.wav"
+          }
+        ],
+        "sound_cues": [
+          {
+            "shot_id": "S01",
+            "event": "滚轮随停箱渐弱"
+          },
+          {
+            "shot_id": "S02",
+            "event": "轻微衣料声，按用户偏好不添加抽纸摩擦声"
+          }
+        ],
+        "mix_plan": "演示数据：固定旁白声线，S01总长4秒含3.2秒旁白和0.8秒反应余量，环境声入店减弱"
+      }
+    },
+    "timing_lock": {
+      "revision": 1,
+      "status": "accepted",
+      "owner": "director",
+      "approved_by": "director-demo",
+      "inputs": {
+        "shot_design": 1,
+        "sound_design": 1
+      },
+      "input_hashes": {
+        "shot_design": "3dbc5fb03472532a611ea15ae64115bad66429590da02f0d9d591eef36710e71",
+        "sound_design": "c89e0405fd6a90237e20825149e9c0f283a3af526d9348e87d9ab7244f6da274"
+      },
+      "data": {
+        "locked": true,
+        "basis": "measured_dialogue",
+        "duration_seconds": 7,
+        "timeline": [
+          {
+            "shot_id": "S01",
+            "start": 0,
+            "end": 4,
+            "dialogue_ids": [
+              "L01"
+            ]
+          },
+          {
+            "shot_id": "S02",
+            "start": 4,
+            "end": 7,
+            "dialogue_ids": []
+          }
+        ]
+      }
+    },
+    "scene_design": {
+      "revision": 1,
+      "status": "accepted",
+      "owner": "scene-design",
+      "approved_by": "director-demo",
+      "inputs": {
+        "timing_lock": 1
+      },
+      "input_hashes": {
+        "timing_lock": "dcc75faac06f1d4bb3ed3d7744dc008add383a3cc9118ee825f67c27d8f45ae6"
+      },
+      "data": {
+        "assets": [
+          {
+            "asset_id": "A01",
+            "path": "DEMO_ONLY/hero.png",
+            "role": "人物与服装",
+            "status": "proposed"
+          },
+          {
+            "asset_id": "A02",
+            "path": "DEMO_ONLY/shop.png",
+            "role": "空间与光向",
+            "status": "proposed"
+          },
+          {
+            "asset_id": "A03",
+            "path": "DEMO_ONLY/hand.png",
+            "role": "手与盒口接触前状态",
+            "status": "proposed"
+          }
+        ],
+        "shots": [
+          {
+            "shot_id": "S01",
+            "space": "旅客沿右侧通道接近店铺",
+            "asset_ids": [
+              "A01",
+              "A02"
+            ]
+          },
+          {
+            "shot_id": "S02",
+            "space": "同一体验台，右手接近纸巾盒",
+            "asset_ids": [
+              "A03"
+            ]
+          }
+        ],
+        "continuity": {
+          "hero": "奶油白衬衫与浅米长裤",
+          "prop": "黑箱保持右后方",
+          "light": "店铺左前方柔光",
+          "count": 1
+        }
+      }
+    },
+    "action_design": {
+      "revision": 1,
+      "status": "accepted",
+      "owner": "action-design",
+      "approved_by": "director-demo",
+      "inputs": {
+        "scene_design": 1
+      },
+      "input_hashes": {
+        "scene_design": "eb46b3f2bc2230d4492cc8b7043666bf93f863770df3b6d38e4aaa2ec7261dbf"
+      },
+      "data": {
+        "shots": [
+          {
+            "shot_id": "S01",
+            "beats": [
+              {
+                "start": 0,
+                "end": 3,
+                "subject": "连续走近体验台",
+                "camera": "小幅真实跟随",
+                "contact": "箱轮贴地"
+              },
+              {
+                "start": 3,
+                "end": 4,
+                "subject": "缩短步幅停稳",
+                "camera": "随人物缓停",
+                "contact": "人停后箱轮完成余量"
+              }
+            ],
+            "previs": {
+              "required": true,
+              "path": "DEMO_ONLY/walk_previs.mp4",
+              "status": "planned"
+            }
+          },
+          {
+            "shot_id": "S02",
+            "beats": [
+              {
+                "start": 0,
+                "end": 1,
+                "subject": "食指拇指靠近盒口",
+                "camera": "固定机位",
+                "contact": "保持手指连续可见"
+              },
+              {
+                "start": 1,
+                "end": 2.6,
+                "subject": "捏住并抽出单张",
+                "camera": "固定机位",
+                "contact": "纸巾与盒口持续接触"
+              },
+              {
+                "start": 2.6,
+                "end": 3,
+                "subject": "手持纸巾停稳",
+                "camera": "固定机位",
+                "contact": "纸巾不穿手"
+              }
+            ],
+            "previs": {
+              "required": true,
+              "path": "DEMO_ONLY/hand_previs.mp4",
+              "status": "planned"
+            }
+          }
+        ]
+      }
+    },
+    "prompt_design": {
+      "revision": 1,
+      "status": "accepted",
+      "owner": "prompt-design",
+      "approved_by": "director-demo",
+      "inputs": {
+        "action_design": 1
+      },
+      "input_hashes": {
+        "action_design": "f8faa645ef084ef0bad5d033e5833ea2cb59c11c38809e157bb83b47b3505e3c"
+      },
+      "data": {
+        "shots": [
+          {
+            "shot_id": "S01",
+            "reference_roles": {
+              "A01": "身份",
+              "A02": "空间"
+            },
+            "prompt": "4秒右后方中景，0–3秒继续前行，3–4秒减速停稳。黑箱在右后方，滚轮贴地，摄影机同步减速。",
+            "negative": [
+              "不换装",
+              "不复制箱子"
+            ],
+            "acceptance": [
+              "身份稳定",
+              "轮地接触",
+              "停步连续"
+            ]
+          },
+          {
+            "shot_id": "S02",
+            "reference_roles": {
+              "A03": "手部与接触"
+            },
+            "prompt": "3秒固定机位特写，0–1秒靠近，1–2.6秒连续抽出一张，2.6–3秒停稳。",
+            "negative": [
+              "不出现多手",
+              "不突然生成纸巾"
+            ],
+            "acceptance": [
+              "一张纸",
+              "手指正确",
+              "接触连续"
+            ]
+          }
+        ]
+      }
+    },
+    "node_design": {
+      "revision": 1,
+      "status": "accepted",
+      "owner": "node-design",
+      "approved_by": "director-demo",
+      "inputs": {
+        "prompt_design": 1
+      },
+      "input_hashes": {
+        "prompt_design": "82132fb76b171a57acd6170fa5aed8a805514f9ae57ab410d60a767c43009c67"
+      },
+      "data": {
+        "selected_by": "director",
+        "shots": [
+          {
+            "shot_id": "S01",
+            "mode": "reference",
+            "node_class": "DEMO_ONLY_reference_video_node",
+            "inputs": {
+              "identity": "A01",
+              "scene": "A02",
+              "motion": "planned previs"
+            }
+          },
+          {
+            "shot_id": "S02",
+            "mode": "reference",
+            "node_class": "DEMO_ONLY_reference_video_node",
+            "inputs": {
+              "contact": "A03",
+              "motion": "planned previs"
+            }
+          }
+        ],
+        "capability_evidence": "教学假设，未核对实际节点；正式执行必须本机检查",
+        "cost_preview": "教学模式，不执行，不作价格或任务批准",
+        "auto_retry": 0
+      }
+    }
+  }
+}

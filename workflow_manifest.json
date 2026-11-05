@@ -1,0 +1,492 @@
+{
+  "schema": "aigc-director-workflow/v2",
+  "version": "3.0.0",
+  "entrypoint": "workflow.py:run",
+  "production_schema": "director-production/v3",
+  "production_skills": [
+    {
+      "id": "cinematic-scene-daily",
+      "skill": "skills/cinematic-scene-daily/SKILL.md",
+      "call_when": "每日场景短片、4–5镜巨构科幻视觉合集、静态图轻运动与统一配乐",
+      "owner": "director",
+      "orchestration": "automation_calls_director",
+      "director_agent": "agent.json",
+      "handoff_command": "director-request",
+      "recursion_guard": "origin=cinematic-scene-daily and director_invocation_active=true",
+      "helper": "skills/cinematic-scene-daily/scripts/daily_scene.py",
+      "execution_scope": "local_prepare_and_assembly_only; generation_by_director_with_current_executor",
+      "schedule_enabled": false,
+      "validation_status": "local_tools_tested_full_generation_not_run",
+      "validation_evidence": "skills/cinematic-scene-daily/references/validation.md",
+      "human_checkpoints": [
+        "static_images",
+        "contract",
+        "final"
+      ]
+    },
+    {
+      "id": "couple-pet-daily-video",
+      "skill": "skills/couple-pet-daily-video/SKILL.md",
+      "call_when": "夫妻日常对话与生活场景改编为写实猫猪主演的竖屏萌宠短片",
+      "owner": "director",
+      "orchestration": "skill_calls_director",
+      "director_agent": "agent.json",
+      "recursion_guard": "origin=couple-pet-daily-video and director_invocation_active=true",
+      "execution_scope": "brief_and_assets_then_generation_by_director_with_current_executor",
+      "required_role_calls": [
+        "shot-design",
+        "sound-design",
+        "scene-design",
+        "action-design"
+      ],
+      "required_shot_contract_sections": [
+        "storyboard",
+        "camera",
+        "voice",
+        "action",
+        "scene",
+        "sound_effects"
+      ],
+      "role_skip_policy": "forbidden_for_generated_shots; scene may return explicit reuse audit; sound may return no-dialogue sound plan",
+      "schedule_enabled": false,
+      "validation_status": "skill_validated_static_accepted_h3_preflight_complete_awaiting_paid_limits",
+      "human_checkpoints": [
+        "static_images",
+        "contract",
+        "final"
+      ]
+    }
+  ],
+  "last_validated": "2026-10-15",
+  "solution_library": {
+    "entrypoint": "方案库/SKILL.md",
+    "catalog": "方案库/catalog.json",
+    "decision_helper": "方案库/decide.py",
+    "services": "方案库/services.json",
+    "credential_references": "方案库/credentials.json",
+    "required_before_video_production": true
+  },
+  "roles": {
+    "director": {
+      "entrypoint": "AGENTS.md",
+      "skill": "SKILL.md"
+    },
+    "shot-design": {
+      "entrypoint": "agents/shot-design/AGENTS.md",
+      "skill": "agents/shot-design/skills/shot-design/SKILL.md",
+      "call_when": "需要拆镜、叙事节奏或复杂构图",
+      "skip_when": "简单明确单镜由总控处理",
+      "context_topics": [
+        "story",
+        "visual",
+        "timing",
+        "camera",
+        "dialogue_timing"
+      ],
+      "deliverable": "镜头表、分镜"
+    },
+    "sound-design": {
+      "entrypoint": "agents/sound-design/AGENTS.md",
+      "skill": "agents/sound-design/skills/sound-design/SKILL.md",
+      "call_when": "需要新对白、配音、音效或混音创作",
+      "skip_when": "现有音频直接复用或不需要声音",
+      "context_topics": [
+        "story",
+        "audio",
+        "dialogue",
+        "timing",
+        "action_cues"
+      ],
+      "deliverable": "声音方案与音频"
+    },
+    "scene-design": {
+      "entrypoint": "agents/scene-design/AGENTS.md",
+      "skill": "agents/scene-design/skills/scene-design/SKILL.md",
+      "call_when": "接收已确定的故事和情绪意图，进行场景视觉转译、空间构图、一致性设计及必要静态图制作",
+      "skip_when": "已有场景已满足当前叙事、镜头与连续性，直接复用",
+      "context_topics": [
+        "story",
+        "world",
+        "emotion",
+        "environment_narrative",
+        "composition",
+        "continuity",
+        "art_direction",
+        "visual",
+        "identity",
+        "space",
+        "camera",
+        "timing",
+        "lighting",
+        "color",
+        "material",
+        "reference_roles",
+        "assets"
+      ],
+      "deliverable": "场景设计包：上游故事依据、空间层次、尺度、连续性、视觉线索、光色材质和必要静态图",
+      "role_version": "3.2.1",
+      "method_skills": [
+        {
+          "id": "scene-narrative",
+          "path": "agents/scene-design/skills/scene-narrative/SKILL.md",
+          "when": "把上游已确定的故事与情绪意图转译为场景可见关系，不创作剧情"
+        },
+        {
+          "id": "scene-spatial-composition",
+          "path": "agents/scene-design/skills/scene-spatial-composition/SKILL.md",
+          "when": "空间、前中后层次、大形、尺度、遮挡"
+        },
+        {
+          "id": "scene-continuity",
+          "path": "agents/scene-design/skills/scene-continuity/SKILL.md",
+          "when": "权威素材、世界状态、跨镜一致性"
+        },
+        {
+          "id": "scene-art-direction",
+          "path": "agents/scene-design/skills/scene-art-direction/SKILL.md",
+          "when": "建筑功能、光色材质与有效复杂度"
+        },
+        {
+          "id": "scene-reference-learning",
+          "path": "agents/scene-design/skills/scene-reference-learning/SKILL.md",
+          "when": "具体知识缺口与参考学习沉淀"
+        }
+      ],
+      "style_catalog": "agents/scene-design/styles/catalog.json",
+      "story_authoring": false,
+      "acceptance_record": "agents/scene-design/references/scene-calibration-accepted.md"
+    },
+    "modeling-design": {
+      "entrypoint": "agents/modeling-design/AGENTS.md",
+      "skill": "agents/modeling-design/skills/blender-reference-blockout/SKILL.md",
+      "role_version": "1.0.0",
+      "call_when": "需要从文字和参考图建立或修改可编辑三维白模、空间造型及尺度接触核查",
+      "skip_when": "不需要三维资产或已认可的模型可直接复用；纯二维/视频任务不强制建模",
+      "context_topics": [
+        "modeling",
+        "geometry",
+        "space",
+        "scale",
+        "camera",
+        "identity",
+        "assets",
+        "reference_roles",
+        "constraints"
+      ],
+      "deliverable": "可编辑 .blend、真实多视图、结构/尺寸依据、接触核查与假设/问题清单",
+      "standalone_request_type": "modeling",
+      "runtime": "agent_interprets_and_executes_through_permitted_blender_bridge"
+    },
+    "action-design": {
+      "entrypoint": "agents/action-design/AGENTS.md",
+      "skill": "agents/action-design/skills/action-design/SKILL.md",
+      "role_version": "3.1.0",
+      "call_when": "需要从静态图逐主体设计动作/静止、物理联动、时间形态或摄影机关系",
+      "skip_when": "各主体动静与运镜均已明确且不需新设计",
+      "context_topics": [
+        "story",
+        "motion",
+        "space",
+        "camera",
+        "identity",
+        "timing",
+        "visual",
+        "assets",
+        "material",
+        "subject_audit",
+        "continuity"
+      ],
+      "deliverable": "逐主体动作合同：沿用subject_audit，动静理由、驱动力/联动、起止与保持、beats/previs及可见验收"
+    },
+    "prompt-design": {
+      "entrypoint": "agents/prompt-design/AGENTS.md",
+      "skill": "agents/prompt-design/skills/prompt-design/SKILL.md",
+      "call_when": "需要生成模型的新提示词或修改",
+      "skip_when": "仅本地平移、剪辑或合成已有素材",
+      "context_topics": [
+        "story",
+        "visual",
+        "motion",
+        "camera",
+        "timing",
+        "constraints",
+        "reference_roles"
+      ],
+      "deliverable": "镜头提示词"
+    },
+    "node-design": {
+      "entrypoint": "agents/node-design/AGENTS.md",
+      "skill": "agents/node-design/skills/node-design/SKILL.md",
+      "call_when": "选择或适配工具、模式、端口与节点",
+      "skip_when": "验证过的方案原样复用并记录依据",
+      "context_topics": [
+        "mode",
+        "assets",
+        "capability",
+        "cost",
+        "timing",
+        "motion",
+        "camera"
+      ],
+      "deliverable": "实现方案"
+    },
+    "vfx-design": {
+      "entrypoint": "agents/vfx-design/AGENTS.md",
+      "skill": "agents/vfx-design/skills/vfx-design/SKILL.md",
+      "call_when": "实际视频完成且本次需要特效",
+      "skip_when": "没有特效需求；没有视频尚不调用",
+      "context_topics": [
+        "story",
+        "video",
+        "vfx",
+        "camera",
+        "space",
+        "timing"
+      ],
+      "deliverable": "特效方案与结果"
+    },
+    "color-grading": {
+      "entrypoint": "agents/color-grading/AGENTS.md",
+      "skill": "agents/color-grading/skills/color-grading/SKILL.md",
+      "role_version": "3.0.0",
+      "style_catalog": "agents/color-grading/styles/catalog.json",
+      "call_when": "视频与必要特效完成且需要调色",
+      "skip_when": "本次不需要调色",
+      "context_topics": [
+        "story",
+        "video",
+        "color",
+        "identity"
+      ],
+      "deliverable": "输入/工作/输出色彩管线、逐镜匹配与所选风格、保护项、动态前后对照和实际处理结果"
+    }
+  },
+  "stages": [
+    {
+      "id": "director_intent",
+      "owner": "director",
+      "depends_on": [],
+      "required": [
+        "user_request",
+        "interpretation",
+        "audience_feeling",
+        "perspective",
+        "constraints",
+        "has_dialogue"
+      ]
+    },
+    {
+      "id": "shot_design",
+      "owner": "shot-design",
+      "depends_on": [
+        "director_intent"
+      ],
+      "required": [
+        "shots"
+      ]
+    },
+    {
+      "id": "sound_design",
+      "owner": "sound-design",
+      "depends_on": [
+        "director_intent"
+      ],
+      "required": [
+        "has_dialogue",
+        "dialogue",
+        "sound_cues",
+        "mix_plan"
+      ]
+    },
+    {
+      "id": "timing_lock",
+      "owner": "director",
+      "depends_on": [
+        "shot_design",
+        "sound_design"
+      ],
+      "required": [
+        "timeline",
+        "duration_seconds",
+        "locked",
+        "basis"
+      ]
+    },
+    {
+      "id": "scene_design",
+      "owner": "scene-design",
+      "depends_on": [
+        "timing_lock"
+      ],
+      "required": [
+        "shots",
+        "assets",
+        "continuity"
+      ]
+    },
+    {
+      "id": "action_design",
+      "owner": "action-design",
+      "depends_on": [
+        "scene_design"
+      ],
+      "required": [
+        "shots"
+      ]
+    },
+    {
+      "id": "prompt_design",
+      "owner": "prompt-design",
+      "depends_on": [
+        "action_design"
+      ],
+      "required": [
+        "shots"
+      ]
+    },
+    {
+      "id": "node_design",
+      "owner": "node-design",
+      "depends_on": [
+        "prompt_design"
+      ],
+      "required": [
+        "selected_by",
+        "shots",
+        "capability_evidence",
+        "cost_preview",
+        "auto_retry"
+      ]
+    }
+  ],
+  "post_stages": [
+    {
+      "id": "video_delivery",
+      "owner": "director",
+      "depends_on": [
+        "node_design"
+      ],
+      "required": [
+        "generation_completed",
+        "clips",
+        "human_review",
+        "media_probe"
+      ]
+    },
+    {
+      "id": "vfx_design",
+      "owner": "vfx-design",
+      "depends_on": [
+        "video_delivery"
+      ],
+      "required": [
+        "treatment",
+        "reason",
+        "shots"
+      ]
+    },
+    {
+      "id": "vfx_delivery",
+      "owner": "director",
+      "depends_on": [
+        "vfx_design"
+      ],
+      "required": [
+        "clips",
+        "human_review",
+        "media_probe"
+      ]
+    },
+    {
+      "id": "color_grading",
+      "owner": "color-grading",
+      "depends_on": [
+        "vfx_delivery"
+      ],
+      "required": [
+        "treatment",
+        "reason",
+        "shots",
+        "color_pipeline"
+      ]
+    },
+    {
+      "id": "post_delivery",
+      "owner": "director",
+      "depends_on": [
+        "color_grading"
+      ],
+      "required": [
+        "clips",
+        "human_review",
+        "media_probe"
+      ]
+    }
+  ],
+  "parallel_design": [
+    "shot_design",
+    "sound_design"
+  ],
+  "director_join": "timing_lock",
+  "execution_policy": {
+    "offline_planner_only": true,
+    "node_selection_authority": "director",
+    "paid_requests_require_separate_approval": true,
+    "automatic_retry": false
+  },
+  "references": [
+    "workflows/director-control-v3.md",
+    "workflows/production-v2.md",
+    "workflows/dialogue-lipsync-production.md",
+    "workflows/post-production.md"
+  ],
+  "legacy_production_schema": "director-production/v2",
+  "orchestration": {
+    "default": "adaptive",
+    "human_checkpoints": [
+      "static_images",
+      "contract",
+      "final"
+    ],
+    "on_problem": "pause_and_ask_user",
+    "automatic_retry": false,
+    "context_budget_chars": 6000,
+    "review_contract": {
+      "schema": "director-contract/v1",
+      "protocol": "workflows/contract-v1.md",
+      "renderer": "contract_html.py",
+      "render_command": "python contract_html.py <state.json> --project <project.json> --out <out.html>",
+      "levels": [
+        "unit",
+        "group",
+        "shot"
+      ],
+      "contract_scopes": [
+        "shot",
+        "group",
+        "film"
+      ],
+      "main_file": "导演制作合同/导演制作合同.html",
+      "archive_dir": ".director/contracts/",
+      "archive_pattern": "导演制作合同/导演制作合同-vNNN.html",
+      "recognized_name_pattern": "^导演制作合同(-v\\d+|-镜头[^\\s.]+)?(-rejected)?\\.html$",
+      "panel": "AIGC 设计（DSH Web GUI 左侧栏插件）只识别符合 recognized_name_pattern 的文件",
+      "rejected_never_enters_context": true,
+      "stages": [
+        "grouping_and_description",
+        "static_frames",
+        "group_video"
+      ],
+      "rejected_name_suffix": "-rejected",
+      "shot_contract_name": "导演制作合同-镜头{shot_id}.html",
+      "render_commands": {
+        "main": "python contract_html.py <state.json> --project <project.json> --out <项目>/导演制作合同/导演制作合同.html",
+        "one_shot": "python contract_html.py <state.json> --project <project.json> --shot S01 --out <项目>/导演制作合同",
+        "all_shots": "python contract_html.py <state.json> --project <project.json> --shots --out <项目>/导演制作合同"
+      },
+      "contract_dir": "导演制作合同"
+    },
+    "legacy_stages_usage": "stages/post_stages are V2 compatibility only, not mandatory V3 tasks"
+  },
+  "style_catalog": "agents/scene-design/styles/catalog.json"
+}

@@ -1,0 +1,18 @@
+version: 3.0.0
+last_validated: 2026-10-11
+canonical_graph: ../workflow_manifest.json
+entry: director_understanding
+mode: adaptive_per_shot
+human_checkpoints: [static_images, contract, final]
+role_decisions: [call, reuse, skip]
+context: current_shot_role_topics_and_selected_asset_refs
+post_roles_require: actual_video
+on_problem: pause_and_ask_user
+legacy_schema: director-production/v2
+authority:
+  timing_lock: director
+  node_selection: director
+  external_execution: separate_task_approval
+invalidation: affected_artifacts_and_context_only
+planner_performs_external_calls: false
+automatic_retry: false

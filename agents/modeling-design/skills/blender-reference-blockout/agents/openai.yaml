@@ -1,0 +1,4 @@
+interface:
+  display_name: "参考图三维白模"
+  short_description: "根据文字与参考图建立可编辑白模，检查轮廓、比例、尺度和空间接触关系"
+  default_prompt: "使用 $blender-reference-blockout，根据我的提示词和参考图片建立可编辑的 Blender 三维白模，并返回多视图与假设说明。"

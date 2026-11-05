@@ -1,0 +1,4 @@
+interface:
+  display_name: "每日电影场景短片"
+  short_description: "设计四到五个写实电影场景，制作轻运动、统一配乐并按日去重续跑"
+  default_prompt: "使用 $cinematic-scene-daily 为今天设计一集巨构科幻展示短片，先恢复当日进度，再推进到下一项需要人审的材料。"

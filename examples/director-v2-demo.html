@@ -1,0 +1,32 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>导演 Agent V2 · 本地结构与交接展示</title>
+<style>
+:root{font-family:'Microsoft YaHei','微软雅黑',sans-serif;color:#183346;background:#f2f5f7}*{box-sizing:border-box}body{margin:0}main{max-width:1240px;margin:auto;padding:48px 32px}header{border-bottom:1px solid #cbd8e0;padding-bottom:24px}h1{font-size:34px;margin:12px 0}h2{font-size:23px}p{line-height:1.8}.tag{font-size:12px;letter-spacing:1px;color:#005f9e}.muted{color:#607481}.flow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:28px 0}.stage{border-left:3px solid #005f9e;background:white;padding:18px;line-height:1.7}.wide{grid-column:1/-1}.stage b{display:block;margin-bottom:4px}.join{background:#e5eff5}.detail{display:grid;grid-template-columns:310px 1fr;gap:28px;margin-top:30px}nav button{display:block;text-align:left;width:100%;padding:14px;border:0;border-bottom:1px solid #d9e2e7;background:transparent;color:#183346;font:inherit;cursor:pointer}nav button.active{background:#005f9e;color:white}article{background:white;padding:28px;min-height:330px}pre{white-space:pre-wrap;line-height:1.8;font-family:inherit;background:#f2f5f7;padding:20px;font-size:13px}a{color:#005f9e}button.test{padding:12px 20px;background:#005f9e;color:white;border:0;font:inherit;cursor:pointer}.result{padding:18px;background:white;border-left:3px solid #b14c45;margin-top:14px}footer{margin-top:30px;font-size:12px;color:#607481}@media(max-width:800px){.detail{grid-template-columns:1fr}main{padding:24px}.flow{grid-template-columns:1fr}.wide{grid-column:auto}}
+</style><main>
+<header><div class="tag">LOCAL DIRECTOR SYSTEM · V2.0 · 2026-10-09</div><h1>人的需求，如何成为一份可执行的镜头合同</h1><p class="muted">1 个导演总控，6 个专业设计角色，每个角色有自己的 Skill。此页面展示本地文件与交接方法，不触发模型、声音或视频生成。</p></header>
+<div class="flow">
+<div class="stage wide"><b>01 总控理解</b>人的原话 → 叙事目的、情绪、视角、可观察证据与不可改条件</div>
+<div class="stage"><b>02A 镜头与分镜</b>景别、机位、切点、时长草案、对白需求</div><div class="stage"><b>02B 声音设计 · 同时推进</b>台词、声线、表演、干声实测时长、音效计划</div>
+<div class="stage wide join"><b>03 总控冻结时轴</b>有对白时，以最终干声及停顿、反应时间锁定分镜。只有估算秒数时保持草案。</div>
+<div class="stage wide"><b>04 场景与静态图</b>锁空间、身份、道具、光向和参考职责</div><div class="stage wide"><b>05 动作设计</b>场景确认后，按时轴设计动作、接触、遮挡和摄影机</div>
+<div class="stage wide"><b>06 提示词设计</b>动作确认后，把已定材料写成六维执行合同</div><div class="stage wide"><b>07 总控安排节点</b>节点角色核对真实能力，最终选择权属于总控</div>
+</div>
+<h2>点击角色，查看它在本地到底是什么</h2><div class="detail"><nav id="nav"></nav><article id="detail"></article></div>
+<h2>试一下：修改对白后，会发生什么</h2><p>教学案例：S01 中景走向店铺 4 秒，含 3.2 秒旁白；S02 手部取纸 3 秒。所有秒数和路径均为人为编写的演示数据，不代表实际音频。</p>
+<button class="test" id="change">把旁白改为 4.5 秒</button><div class="result" id="result">当前：设计示例就绪。真实生成授权：否。命令行演示会执行实际依赖检查。</div>
+<p><a href="production_state.json">打开示例状态 JSON</a> · <a href="../workflows/production-v2.md">打开完整交接规范</a> · <a href="../workflow_manifest.json">打开角色与流程注册表</a></p>
+<footer>页面按钮是交互说明。真实离线演示：python scripts/demo_production.py。脚本只报告可启动角色和过期产物，不启动 Agent 进程，不提交任何计费请求。</footer></main>
+<script>
+const roles=[
+['director','导演总控','AGENTS.md','SKILL.md','理解人的语言，组织专业设计，冻结时轴，决定节点并验收。','用户原话\n导演解释\n观众需要看见、听见什么\n不可改变的条件\n当前可启动的专业角色'],
+['shot-design','镜头设计','agents/shot-design/AGENTS.md','agents/shot-design/skills/shot-design/SKILL.md','负责景别、视角、分镜与时长草案。','shot_id: S01\n景别: 中景\n视角: 右后方\n时长草案: 4秒\n对白: 有，等待声音时长\n转场: 视线与动作衔接'],
+['sound-design','声音设计','agents/sound-design/AGENTS.md','agents/sound-design/skills/sound-design/SKILL.md','与分镜并行，先完成干声时间依据，后续继续音效与混音。','角色声线固定\n逐句表演与实际句长\n精确停顿本地处理\n动作音效与声音桥\n画面认可后只修可见说话口型'],
+['scene-design','场景设计','agents/scene-design/AGENTS.md','agents/scene-design/skills/scene-design/SKILL.md','按锁定分镜设计空间与独立静态参考图。','asset_id / path / role / status\n身份、姿态、场景、产品分别分工\n左右与空间轴线唯一\n静态状态图不等于运动证据'],
+['action-design','动作设计','agents/action-design/AGENTS.md','agents/action-design/skills/action-design/SKILL.md','在确定场景内写秒级主体动作、接触与摄影机。','0–1秒: 手接近盒口\n1–2.6秒: 连续抽出一张\n2.6–3秒: 手持停稳\n摄影机: 固定\n接触: 纸巾不断裂、不穿手'],
+['prompt-design','提示词设计','agents/prompt-design/AGENTS.md','agents/prompt-design/skills/prompt-design/SKILL.md','把已有设计编译为执行合同，不临时增加故事或动作。','参考项\n保持不变\n分时序\n主体动作\n摄影机\n禁止项 + 验收'],
+['node-design','节点设计','agents/node-design/AGENTS.md','agents/node-design/skills/node-design/SKILL.md','支持总控选择模式，核对本机端口、输入和费用。','selected_by: director\n真实节点与模式\n素材到端口的映射\n预览与保存\n费用与停止线\nauto_retry: 0']];
+const nav=document.getElementById('nav'),detail=document.getElementById('detail');
+function select(i){const r=roles[i];detail.replaceChildren();const title=document.createElement('h2');title.textContent=r[1]+' Agent';const p=document.createElement('p');p.textContent=r[4];const pre=document.createElement('pre');pre.textContent=r[5];detail.append(title,p,pre);for(const [label,path]of [['角色文件',r[2]],['自有 Skill',r[3]]]){const line=document.createElement('p'),a=document.createElement('a');a.href='../'+path;a.textContent=label+'：'+path;line.append(a);detail.append(line)}[...nav.children].forEach((b,j)=>b.classList.toggle('active',i===j));}
+roles.forEach((r,i)=>{const b=document.createElement('button');b.textContent=r[1];b.onclick=()=>select(i);nav.append(b)});select(0);
+document.getElementById('change').onclick=()=>{document.getElementById('result').textContent='对白从3.2秒改为4.5秒，已经超过原4秒镜头。总控必须重锁时轴；场景、动作、提示词和节点产物沿依赖标为过期。即使忘记递增版本，正文哈希变化也会触发检查。镜头草案可以保留，不能直接提交旧工作流。';};
+</script></html>

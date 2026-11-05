@@ -1,0 +1,14 @@
+{
+  "schema_version":"director-production/v3",
+  "example_only":true,
+  "project_file":"<PROJECT_ROOT>/<示例项目>/.director/project.json",
+  "brief":{
+    "request":"演示：已有图片加已有音频，镜头简单平移，但画面人物还需要回头。仅检查路由，不运行视频任务。",
+    "goal":"镜头平移与人物回头分别设计，保留人物身份与已有音轨。",
+    "audio_mode":"provided","visual_source":"provided","subject_motion":"required",
+    "camera_motion":"pan","render_mode":"local_pan","needs_vfx":false,"needs_color":false,
+    "asset_ids":["airport-character-sheet","airport-audio-existing"]
+  },
+  "shots":[{"shot_id":"S01","summary":"人物回头，同时做简单平移；时长待按实际音轨确定。"}],
+  "artifacts":{},"reviews":{},"completed_calls":{},"issues":[]
+}

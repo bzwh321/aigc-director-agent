@@ -1,0 +1,82 @@
+{
+  "schema": "scene-style-catalog/v1",
+  "default_style_id": "photoreal-cinema",
+  "selection_order": [
+    "shot",
+    "brief",
+    "project",
+    "default"
+  ],
+  "styles": [
+    {
+      "id": "photoreal-cinema",
+      "name": "写实电影",
+      "version": "1.0.0",
+      "aliases": [
+        "写实电影风格",
+        "电影写实",
+        "photorealistic cinema"
+      ],
+      "summary": "以实拍电影镜头为表现目标，关注摄影、光源、材料与尺度的可信关系。",
+      "skill": "agents/scene-design/skills/style-photoreal-cinema/SKILL.md",
+      "validation_status": "user_accepted_case",
+      "validation_evidence": {
+        "case": "借潮",
+        "date": "2026-10-11",
+        "record": "D:/知识库/persons/AIGC导演/agents/scene-design/references/scene-calibration-accepted.md",
+        "scope": "本轮静态图，不是跨题材普遍验证"
+      }
+    },
+    {
+      "id": "realistic-game",
+      "name": "写实游戏",
+      "version": "1.0.0",
+      "aliases": [
+        "写实游戏风格",
+        "游戏写实"
+      ],
+      "summary": "以写实游戏场景为表现目标，兼顾材料可信度、轮廓和空间可读性。",
+      "skill": "agents/scene-design/skills/style-realistic-game/SKILL.md",
+      "validation_status": "configured_not_image_validated"
+    },
+    {
+      "id": "concept-art",
+      "name": "概念插画",
+      "version": "1.0.0",
+      "aliases": [
+        "概念画",
+        "概念设计",
+        "概念美术"
+      ],
+      "summary": "以设计探索和绘画表达为目标，突出体块、构图、光色与氛围。",
+      "skill": "agents/scene-design/skills/style-concept-art/SKILL.md",
+      "validation_status": "configured_not_image_validated"
+    },
+    {
+      "id": "stylized-3d",
+      "name": "风格化三维动画",
+      "version": "1.0.0",
+      "aliases": [
+        "三维动画",
+        "3D动画",
+        "3d animation"
+      ],
+      "summary": "用可控的造型概括、材料和光影组织三维动画式画面。",
+      "skill": "agents/scene-design/skills/style-stylized-3d/SKILL.md",
+      "validation_status": "configured_not_image_validated"
+    },
+    {
+      "id": "animation-2d",
+      "name": "二维动画",
+      "version": "1.0.0",
+      "aliases": [
+        "2D动画",
+        "二维动画风格",
+        "2d animation"
+      ],
+      "summary": "用统一线条、色块与阴影层次形成二维动画式画面。",
+      "skill": "agents/scene-design/skills/style-animation-2d/SKILL.md",
+      "validation_status": "configured_not_image_validated"
+    }
+  ]
+}

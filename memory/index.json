@@ -1,0 +1,21 @@
+{
+  "schema": "aigc-director-memory/v1",
+  "updated_at": "2026-09-28",
+  "entries": [
+    {
+      "id": "director-principles-v1",
+      "type": "semantic",
+      "created_at": "2026-09-28",
+      "updated_at": "2026-09-28",
+      "last_used_at": "2026-09-28",
+      "source": "AIGC导演Agent设计",
+      "confidence": 0.95,
+      "decay_score": 1.0,
+      "summary": "导演优先、运动预演优先和付费门禁原则",
+      "evidence": [
+        "semantic/director-principles.md"
+      ],
+      "reuse_rule": "每次工作流设计前读取"
+    }
+  ]
+}
